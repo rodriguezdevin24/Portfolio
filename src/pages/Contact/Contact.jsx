@@ -1,13 +1,14 @@
 import React from 'react'
-import './home.css'
+import './contact.css'
+import '../../App.css'
 
-const Home= () => {
+const Contact= () => {
   return (
-    <div className = "home">
-        <h1 className = "title">About Me</h1>
+    <div className = "page-container">
+        <h1 className = "page-title">Get In Contact</h1>
     </div>
   )
 }
 
-export default Home;
+export default Contact;
 
