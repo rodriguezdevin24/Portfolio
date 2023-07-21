@@ -4,13 +4,33 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { motion } from 'framer-motion';
 import './navbar.css';
 
+const navbarVariants = {
+  initial: {
+    x: '-100vw',
+  },
+  in: {
+    x: 0,
+  },
+};
+
+const navbarTransition = {
+  type: 'tween',
+  ease: 'easeInOut',
+  duration: 1.1,
+};
 
 function MainNavbar() {
 
   return (
-  
+    <motion.div
+    initial="initial"
+    animate="in"
+    variants={navbarVariants}
+    transition={navbarTransition}
+  >
     <Navbar expand="lg" className="testing">
     <Container>
       <Navbar.Brand href="/">DR</Navbar.Brand>
@@ -25,6 +45,7 @@ function MainNavbar() {
       </Navbar.Collapse>
     </Container>
   </Navbar>
+  </motion.div>
 );
 }    
   

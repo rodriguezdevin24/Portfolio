@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const pageVariants = {
   initial: {
-    opacity: 0,
+    opacity: 1,
     y: "100vh",
   },
   in: {
@@ -22,6 +22,7 @@ const pageTransition = {
   type: "tween",
   ease: "easeInOut",
   duration: 1,
+  delay: 1.2,
 };
 
 const Home = () => {

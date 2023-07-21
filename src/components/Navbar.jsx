@@ -1,9 +1,28 @@
 // Navbar.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 import "./navbar.css";
 
+const navbarVariants = {
+  initial: {
+    opacity: 0,
+    x: '-100vw',
+  },
+  in: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const navbarTransition = {
+  type: 'tween',
+  ease: 'anticipate',
+  duration: 0.5,
+};
+
 const Navbar = () => {
+
   const handleContactClick = () => {
     const emailUrl = "mailto:devin.rodriguez.p8@gmail.com";
     const emailWindow = window.open(emailUrl, "_blank");
@@ -31,6 +50,12 @@ const Navbar = () => {
     }
   };
   return (
+    <motion.div
+      initial="initial"
+      animate="in"
+      variants={navbarVariants}
+      transition={navbarTransition}
+    >
     <nav className="navbar">
       <div className="navbar-brand">
         <h2>DR</h2>
@@ -56,6 +81,7 @@ const Navbar = () => {
         </button>
       </div>
     </nav>
+    </motion.div>
   );
 };
 
