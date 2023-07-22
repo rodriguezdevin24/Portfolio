@@ -2,6 +2,7 @@ import React from 'react'
 import './about.css'
 import '../../App.css'
 
+
 const About= () => {
   return (
     <div className = "page-container">

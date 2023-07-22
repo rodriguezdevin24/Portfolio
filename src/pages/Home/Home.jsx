@@ -3,6 +3,7 @@ import "./home.css";
 import "../../App.css";
 import { motion } from "framer-motion";
 
+
 const pageVariants = {
   initial: {
     opacity: 1,
