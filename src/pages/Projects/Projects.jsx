@@ -1,7 +1,7 @@
 import React from 'react';
 import './projects.css';
 import '../../App.css';
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const pageVariants = {
   initial: {
