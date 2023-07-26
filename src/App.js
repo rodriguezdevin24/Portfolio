@@ -7,6 +7,8 @@ import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 
+//TO ADD A REVIEW SECTION WHERE PEOPLE CAN LEAVE REVIEWS
+
 const App = () => {
   return (
     <Router>
