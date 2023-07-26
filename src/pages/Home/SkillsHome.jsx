@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import htmlIcon from "../../data/Icons/html-icon.svg";
 import cssIcon from "../../data/Icons/css-icon.svg";
 import jsIcon from "../../data/Icons/js-icon.svg";
@@ -40,7 +42,7 @@ const Section = styled.section`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 2.5em;
   margin-top: 50px;
 `;
@@ -57,20 +59,28 @@ const SkillsGrid = styled.div`
     ); // Display a maximum of 2 skills per row on small screens
   }
 `;
-const Skill = styled.div`
+const Skill = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 2em;
+  padding: 1em;
 `;
 
-const Icon = styled.img`
+const Icon = styled(motion.img)`
   width: 24px;
   height: 24px;
 `;
 
 
+
 const SkillsHome = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
+  
   const skills = [
     { name: "HTML", icon: htmlIcon },
     { name: "CSS", icon: cssIcon },
@@ -99,19 +109,33 @@ const SkillsHome = () => {
 
   return (
     <Section>
-      <Title>Technical Proficiencies</Title>
+      <Title
+        ref={ref}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+        transition={{ duration: 0.5 }}
+      >
+        Technical Proficiencies
+      </Title>
       <SkillsGrid>
-        {skills.map((skill, index) => (
-          <Skill key={index}>
-            <Icon src={skill.icon} alt={skill.name} />
-            {skill.name}
-          </Skill>
-        ))}
+        <AnimatePresence>
+          {inView && skills.map((skill, index) => (
+            <Skill
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ delay: index * 0.07, duration: 0.5 }}
+            >
+              <Icon src={skill.icon} alt={skill.name} />
+              {skill.name}
+            </Skill>
+          ))}
+        </AnimatePresence>
       </SkillsGrid>
     </Section>
   );
 };
-
 export default SkillsHome;
 
 
