@@ -1,4 +1,7 @@
 /* Home.css */
+
+
+/* projectcard.css */
 .projectCard {
     display: grid;
     background: #1d1d1d;
@@ -110,3 +113,28 @@
     width: 100%;
   }
   
+/* ScrollButton.css */
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.scroll-button .arrow {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-button:hover .arrow {
+  opacity: 1;
+}

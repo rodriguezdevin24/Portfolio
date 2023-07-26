@@ -6,22 +6,23 @@ import SkillsHome from './SkillsHome';
 import styled from 'styled-components';
 import FooterAnimation from './FooterHome';
 import ScrollToTopButton from '../../components/ScrollToTop/ScrollToTopButton';
+import ScrollButton from './ScrollButton';
 
 
 const Container = styled.div`
-scroll-snap-type: y mandatory;
-overflow-y: scroll;
-scroll-behavior: smooth;
-`;
 
+`;
 
 const Home = () => {
   return (
     <Container>
       <LandingHome />
-      <JourneyHome />
-      <SkillsHome />
-      <ProjectHome />
+      <ScrollButton target="journeyHome" />
+      <JourneyHome id="journeyHome" />
+      <ScrollButton target="skillsHome" />
+      <SkillsHome id="skillsHome" />
+      <ScrollButton target="projectHome" />
+      <ProjectHome id="projectHome" />
       <FooterAnimation />
       <ScrollToTopButton/>
     </Container>

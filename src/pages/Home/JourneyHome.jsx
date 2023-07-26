@@ -12,7 +12,6 @@ const Section = styled.section`
   color: white;
   font-size: 1.5em;
   padding: 4em;
-  scroll-snap-align: center;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
   }
@@ -38,9 +37,9 @@ const MoreButton = styled.button`
   cursor: pointer;
 `;
 
-const JourneyHome = () => {
+const JourneyHome = ({ id }) => {
   return (
-    <Section>
+    <Section id={id}> 
       <Title>My Journey</Title>
       <JourneyText>
         Born and raised in New York, I discovered my passion for technology at a young age. After high school, I joined the military and became a medic. On a whim, I decided to try out software development and instantly fell in love. It's a passion I plan to pursue, whether professionally or as a hobby.
