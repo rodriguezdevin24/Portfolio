@@ -78,7 +78,7 @@ const Icon = styled(motion.img)`
 const SkillsHome = () => {
 
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: [0.1, 0.1,]
   });
 
@@ -127,7 +127,7 @@ const SkillsHome = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
-              transition={{ delay: index * 0.07, duration: 0.5 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
             >
               <Icon src={skill.icon} alt={skill.name} />
               {skill.name}
