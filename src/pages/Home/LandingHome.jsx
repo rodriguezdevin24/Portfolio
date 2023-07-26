@@ -42,6 +42,8 @@ const LandingHome = () => {
     export default LandingHome;
 
 
+// come explore my universe
+
 //Something like what is was before hi im devin rodriguez a software engineer, and the brand
 //and then continue scrolling to find out more! arrow pointing down. then more about is next
 

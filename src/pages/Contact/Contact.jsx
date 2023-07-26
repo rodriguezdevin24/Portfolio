@@ -4,6 +4,7 @@ import "./contact.css";
 import "../../App.css";
 import { motion } from "framer-motion";
 
+
 const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [name, setName] = useState("");
@@ -38,7 +39,7 @@ const Contact = () => {
         <motion.input
           className="contact-input"
           type="text"
-          name="name" 
+          name="name"
           value={name}
           placeholder="Name"
           initial={{ scale: 0 }}
@@ -49,7 +50,7 @@ const Contact = () => {
         <motion.input
           className="contact-input"
           type="email"
-          name="email" 
+          name="email"
           value={email}
           placeholder="Email"
           initial={{ scale: 0 }}
@@ -59,7 +60,7 @@ const Contact = () => {
         />
         <motion.textarea
           className="contact-input"
-          name="message" 
+          name="message"
           value={message}
           placeholder="Message"
           initial={{ scale: 0 }}

@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "../../components/Footer/Footer";
+import { Canvas } from "@react-three/fiber";
+import {  Stars } from "@react-three/drei";
+
 
 import "./home.css";
 
@@ -32,6 +35,11 @@ const FooterAnimation = () => {
           hidden: { clipPath: `circle(0%)`, transition: { duration: 1 } },
         }}
       >
+          <Canvas style={{ position: "absolute" }}>
+          <Stars />
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+        </Canvas>
         <div className="content">
           <h1 className="title">
             <motion.div
