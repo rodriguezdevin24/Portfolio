@@ -1,60 +1,60 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import "./home.css";
 
 const FooterAnimation = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const ref = useRef();
-
-  const { y } = useSpring({
-    y: isVisible ? "0%" : "100%",
-    config: { duration: 1000 },
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.1,
   });
 
-  const { r } = useSpring({
-    r: isVisible ? Math.min(100, scrollY) : 0,
-    config: { duration: 1000 },
-  });
+  console.log('Is in view:', inView); 
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        if (rect.bottom < window.innerHeight) {
-          setIsVisible(true);
-          // Calculate scroll position relative to the footer section
-          const relativeScrollY = ((window.innerHeight - rect.top) / window.innerHeight) * 100;
-          setScrollY(relativeScrollY);
-        } else {
-          setIsVisible(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
   return (
     <div ref={ref} className="body">
-      <animated.div
+      <motion.div
         className="dot"
-        style={{
-          clipPath: r.to((val) => `circle(${val}%)`),
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: { clipPath: `circle(100%)`, transition: { duration: 3 } },
+          hidden: { clipPath: `circle(0%)`, transition: { duration: 1 } },
         }}
       >
         <div className="content">
           <h1 className="title">
-            <animated.div style={{ y }}>
-              {r.to((val) => (val === 100 ? "If you like what you see, come embark with me on my journey!" : ""))}
-            </animated.div>
+            <motion.div
+              animate={controls}
+              initial="hidden"
+              variants={{
+                visible: { y: "0%", opacity: 1, transition: { delay: 1 } },
+                hidden: { y: "100%", opacity: 0 },
+              }}
+            >
+              If you like what you see, come embark with me on my journey!
+            </motion.div>
           </h1>
-          <animated.div style={{ opacity: r.to((val) => (val === 100 ? 1 : 0)) }}>
+          <motion.div
+            animate={controls}
+            initial="hidden"
+            variants={{
+              visible: { y: "0%", opacity: 1, transition: { delay: 1.5 } },
+              hidden: { y: "100%", opacity: 0 },
+            }}
+          >
             <button className="contact-button">Get in contact</button>
-          </animated.div>
+          </motion.div>
         </div>
-      </animated.div>
+      </motion.div>
     </div>
   );
 };
