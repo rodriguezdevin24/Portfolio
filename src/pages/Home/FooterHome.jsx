@@ -25,10 +25,7 @@ const FooterAnimation = () => {
     }
   }, [controls, inView]);
   
-  const Section = styled.section`
-  
-  `;
-  
+
   
   return (
    
