@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
+import Footer from "../../components/Footer/Footer";
+
 import "./home.css";
 
 const FooterAnimation = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.8,
   });
 
-  console.log('Is in view:', inView); 
+  console.log("Is in view:", inView);
 
   useEffect(() => {
     if (inView) {
@@ -52,6 +54,17 @@ const FooterAnimation = () => {
             }}
           >
             <button className="contact-button">Get in contact</button>
+          </motion.div>
+          <motion.div
+            className="footer-wrapper"
+            animate={controls}
+            initial="hidden"
+            variants={{
+              visible: { y: "0%", opacity: 1, transition: { delay: 1.8 } },
+              hidden: { y: "100%", opacity: 0 },
+            }}
+          >
+            <Footer className="footer-black" />
           </motion.div>
         </div>
       </motion.div>
