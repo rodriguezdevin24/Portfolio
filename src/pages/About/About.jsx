@@ -14,7 +14,7 @@ const About= () => {
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
         </Canvas>
-        <h1 className = "page-title">A Little Bit About Me </h1>
+        <h1 className = "about-title">A Little Bit About Me </h1>
     </div>
   )
 }

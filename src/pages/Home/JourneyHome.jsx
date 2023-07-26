@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import './home.css'
+
 
 const Section = styled.section`
   display: flex;
@@ -50,3 +52,4 @@ const JourneyHome = ({ id }) => {
 };
 
 export default JourneyHome;
+//TO ADD. 3D ANIMATION FOR HI IM DEVIN THAT HIGHLIGHTS EACH LETTER IN AN ANIMATION
