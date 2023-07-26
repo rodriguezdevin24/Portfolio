@@ -64,6 +64,7 @@ const Skill = styled(motion.div)`
   align-items: center;
   justify-content: center;
   gap: 1.5em;
+  margin-bottom: 1.1em;
   
 `;
 
