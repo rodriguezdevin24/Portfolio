@@ -63,8 +63,8 @@ const Skill = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
-  padding: 1em;
+  gap: 1em;
+  
 `;
 
 const Icon = styled(motion.img)`
@@ -78,6 +78,7 @@ const SkillsHome = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
+    threshold: [0.1, 0.1,]
   });
 
   
