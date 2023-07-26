@@ -37,6 +37,7 @@ const Section = styled.section`
   font-size: 1.5em;
   padding: 2em;
   padding-bottom: 100px;
+  scroll-snap-align: center;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
   }
@@ -138,9 +139,10 @@ const SkillsHome = () => {
     </Section>
   );
 };
-export default SkillsHome;
-
 
 //attributions 
 //<a href="https://iconscout.com/icons/postgresql" target="_blank">Free Postgresql Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a>
 //<a href="https://iconscout.com/icons/figma" target="_blank">Free Figma Icon</a> by <a href="https://iconscout.com/contributors/icon-54">Icon 54</a> on <a href="https://iconscout.com">IconScout</a>
+
+export default SkillsHome;
+

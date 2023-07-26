@@ -11,6 +11,7 @@ const Section = styled.section`
   color: white;
   font-size: 1.5em;
   padding: 4em;
+  scroll-snap-align: center;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
   }

@@ -11,6 +11,7 @@ text-align: center;
 color: white;
 font-size: 1.5em;
 margin-top: 150px;
+scroll-snap-align: center;
 `;
 const Title = styled.h1`
   font-size: 2.5em;
