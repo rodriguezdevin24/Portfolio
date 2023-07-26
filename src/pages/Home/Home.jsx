@@ -3,8 +3,8 @@ import LandingHome from './LandingHome';
 import JourneyHome from './JourneyHome';
 import ProjectHome from './ProjectHome';
 import SkillsHome from './SkillsHome';
-import ContactHome from './ContactHome';
 import styled from 'styled-components';
+import FooterAnimation from './FooterHome';
 
 
 const Container = styled.div`
@@ -19,7 +19,7 @@ const Home = () => {
       <JourneyHome />
       <SkillsHome />
       <ProjectHome />
-      <ContactHome />
+      <FooterAnimation />
     </Container>
   )
 }
