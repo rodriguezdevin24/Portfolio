@@ -5,6 +5,7 @@ import ProjectHome from './ProjectHome';
 import SkillsHome from './SkillsHome';
 import styled from 'styled-components';
 import FooterAnimation from './FooterHome';
+import ScrollToTopButton from '../../components/ScrollToTop/ScrollToTopButton';
 
 
 const Container = styled.div`
@@ -20,6 +21,7 @@ const Home = () => {
       <SkillsHome />
       <ProjectHome />
       <FooterAnimation />
+      <ScrollToTopButton/>
     </Container>
   )
 }
