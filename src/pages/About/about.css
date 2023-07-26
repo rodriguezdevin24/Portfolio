@@ -4,3 +4,28 @@
     margin-top: 30px;
     margin-bottom: 10vh;
 }
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    color: white;
+    padding: 50px; 
+    text-align: left;
+    @media (min-width: 769px) {
+        height: 100vh; 
+      }
+}
+
+.aboutTitle {
+    font-size: 2.5em; 
+    margin-bottom: 25px;
+    border-bottom: 2px solid white; 
+    width: fit-content; 
+}
+
+p {
+    font-size: 1.8em; 
+    line-height: 1.9;
+    z-index: 1;
+}
