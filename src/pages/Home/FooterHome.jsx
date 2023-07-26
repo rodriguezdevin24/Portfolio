@@ -7,7 +7,7 @@ import {  Stars } from "@react-three/drei";
 
 
 import "./home.css";
-import { styled } from "styled-components";
+
 
 const FooterAnimation = () => {
   const controls = useAnimation();
