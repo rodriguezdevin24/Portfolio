@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import styled from "styled-components";
+import ProjectCard from "./ProjectCard";
 
 const Section = styled.section`
-  background-color: #022945 ;
+  background-color: #022945;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -49,11 +49,13 @@ const ProjectsButton = styled.button`
   margin-top: 2em;
 `;
 
-const ProjectHome = () => {
+const ProjectHome = ({ id }) => {
   return (
-    <Section>
+    <Section id={id}>
       <Title>Current Projects</Title>
-      <Subtitle>A preview of my current projects. Click below to find out more.</Subtitle>
+      <Subtitle>
+        A preview of my current projects. Click below to find out more.
+      </Subtitle>
       <CardContainer>
         <ProjectCard />
         <ProjectCard />
@@ -61,7 +63,7 @@ const ProjectHome = () => {
       </CardContainer>
       <ProjectsButton>See More Projects</ProjectsButton>
     </Section>
-  )
-}
+  );
+};
 
 export default ProjectHome;

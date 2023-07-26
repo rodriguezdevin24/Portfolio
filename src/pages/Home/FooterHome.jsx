@@ -7,6 +7,7 @@ import {  Stars } from "@react-three/drei";
 
 
 import "./home.css";
+import { styled } from "styled-components";
 
 const FooterAnimation = () => {
   const controls = useAnimation();
@@ -23,8 +24,11 @@ const FooterAnimation = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+  
 
+  
   return (
+   
     <div ref={ref} className="body">
       <motion.div
         className="dot"
@@ -77,7 +81,8 @@ const FooterAnimation = () => {
         </div>
       </motion.div>
     </div>
-  );
+ 
+ );
 };
 
 export default FooterAnimation;
