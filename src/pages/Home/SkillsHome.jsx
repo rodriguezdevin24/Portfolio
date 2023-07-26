@@ -134,8 +134,5 @@ const SkillsHome = ({ id }) => {
   );
 };
 
-//attributions
-//<a href="https://iconscout.com/icons/postgresql" target="_blank">Free Postgresql Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a>
-//<a href="https://iconscout.com/icons/figma" target="_blank">Free Figma Icon</a> by <a href="https://iconscout.com/contributors/icon-54">Icon 54</a> on <a href="https://iconscout.com">IconScout</a>
 
 export default SkillsHome;
