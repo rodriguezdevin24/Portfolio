@@ -2,16 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
   padding-left: 20%;
-  background-color: #282c34;
+  background-color: #022945;
   color: white;
   font-size: 1.5em;
+  padding: 4em;
+  @media (min-width: 769px) {
+    height: 100vh; // Set the height to 100vh on larger screens
+  }
 `;
 
 const Title = styled.h1`
