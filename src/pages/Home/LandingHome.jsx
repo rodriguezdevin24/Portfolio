@@ -5,7 +5,7 @@ const Section = styled.div`
 height: 100vh;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: start;
 align-items: center;
 text-align: center;
 color: white;
@@ -23,11 +23,7 @@ const Subtitle = styled.h2`
   margin-bottom: 2em;
 `;
 
-const ScrollIndicator = styled.div`
-  margin-top: auto;
-  margin-bottom: 350px;
-  font-size: 2em;
-`;
+
 
 const LandingHome = () => {
     return (
@@ -35,7 +31,6 @@ const LandingHome = () => {
           <Title>Hi. I'm Devin Rodriguez.</Title>
           <Subtitle>A Software Engineer.</Subtitle>
           <p>From military medic to full-stack developer, I bring a unique, neurodivergent perspective and a passion for learning to my work.</p>
-          <ScrollIndicator>⬇️</ScrollIndicator>
         </Section>
       );
     };
