@@ -23,6 +23,9 @@ const HireMe = () => {
           with. I love to help out when I can and would never shun anyone away
           from asking for help.{" "}
         </p>
+        <a href="/Devin_Rodriguez_Resume.pdf" download="Devin_Rodriguez_Resume.pdf">
+          Download My Resume
+        </a>
       </div>
     </div>
   );

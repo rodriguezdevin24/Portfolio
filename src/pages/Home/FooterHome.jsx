@@ -71,18 +71,18 @@ const FooterAnimation = () => {
             animate={controls}
             initial="hidden"
             variants={{
-              visible: { y: "0%", opacity: 1, transition: { delay: 1.8 } },
+              visible: { y: "0%", opacity: 1, transition: { delay: 2 } },
               hidden: { y: "100%", opacity: 0 },
             }}
           >
-            Together we can reach the stars
+            Together we can reach the stars..
           </motion.div>
           <motion.div
             className="footer-wrapper"
             animate={controls}
             initial="hidden"
             variants={{
-              visible: { y: "0%", opacity: 1, transition: { delay: 2 } },
+              visible: { y: "0%", opacity: 1, transition: { delay: 2.3 } },
               hidden: { y: "100%", opacity: 0 },
             }}
           >

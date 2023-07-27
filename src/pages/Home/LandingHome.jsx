@@ -16,18 +16,17 @@ const Section = styled.div`
   scroll-snap-align: center;
 `;
 
-// const Subtitle = styled.h2`
-//   font-size: 1.2em;
-//   margin-bottom: 2em;
-// `;
+
 
 const h1EnterFromBottomVariants = {
   initial: {
     y: "50vh",
+    x: "50%",
     opacity: 0,
   },
   animate: {
     y: 0,
+    x: 0, 
     opacity: 1,
     transition: { delay: 1, duration: 1 },
   },
@@ -47,17 +46,39 @@ const subtitleVariants = {
   },
 };
 
+const h1SlideFromRightVariants = {
+  initial: {
+    x: "-30vw",
+     opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: { delay: 2.5, duration: 1 },
+  },
+};
+
 const LandingHome = () => {
   return (
     <Section>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: "5px" }}>
       <motion.h1
         className="landing-title"
         variants={h1EnterFromBottomVariants}
         initial="initial"
         animate="animate"
       >
-        Hi. I'm Devin Rodriguez.
+        Hi.
       </motion.h1>
+      <motion.h1
+        className="landing-title"
+        variants={h1SlideFromRightVariants}
+        initial="initial"
+        animate="animate"
+      >
+        I'm Devin Rodriguez.
+      </motion.h1>
+      </div>
       <motion.h2
         className="landing-subtitle"
         variants={subtitleVariants}
@@ -67,7 +88,7 @@ const LandingHome = () => {
           type: "spring",
           stiffness: 260,
           damping: 20,
-          delay: 2.7,
+          delay: 4.5,
         }}
       >
         A Software Engineer.
@@ -75,7 +96,7 @@ const LandingHome = () => {
       <motion.p
         initial={{ x: "-100%" }}
         animate={{ x: "0%" }}
-        transition={{ duration: 1.3, ease: "easeInOut", delay: 3.8 }}
+        transition={{ duration: 1.3, ease: "easeInOut", delay: 5.5 }}
       >
         From military medic to full-stack developer, I bring a unique,
         neurodivergent perspective and a passion for learning to my work.
@@ -91,4 +112,4 @@ export default LandingHome;
 //Something like what is was before hi im devin rodriguez a software engineer, and the brand
 //and then continue scrolling to find out more! arrow pointing down. then more about is next
 
-// together we can reach the stars
+
