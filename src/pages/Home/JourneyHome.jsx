@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+//import { motion } from "framer-motion";
+
 import './home.css'
 
 
@@ -38,6 +40,20 @@ const MoreButton = styled.button`
   color: blue;
   cursor: pointer;
 `;
+// const pageVariants = {
+//   initial: {
+//     opacity: 1,
+//     y: "100vh",
+//   },
+//   in: {
+//     opacity: 1,
+//     y: 0,
+//   },
+//   out: {
+//     opacity: 0,
+//     y: "-100vh",
+//   },
+// };
 
 const JourneyHome = ({ id }) => {
   return (
