@@ -17,4 +17,5 @@ body {
     background-color: #022945;
     min-height: 100vh; 
     color: white;
+    position: relative; 
 }

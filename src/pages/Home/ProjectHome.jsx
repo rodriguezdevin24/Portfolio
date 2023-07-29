@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
+import { Link } from "react-scroll";
 
 const Section = styled.section`
   background-color: #022945;
@@ -47,6 +48,7 @@ const ProjectsButton = styled.button`
   color: blue;
   cursor: pointer;
   margin-top: 2em;
+  margin-bottom: 100px;
 `;
 
 const ProjectHome = ({ id }) => {
@@ -61,7 +63,10 @@ const ProjectHome = ({ id }) => {
         <ProjectCard />
         <ProjectCard />
       </CardContainer>
-      <ProjectsButton>See More Projects</ProjectsButton>
+      <ProjectsButton>View More Projects</ProjectsButton>
+      <Link to="footerAnimation" smooth={true} duration={500}>
+      <button className = "scrollDown">V</button>
+      </Link>
     </Section>
   );
 };

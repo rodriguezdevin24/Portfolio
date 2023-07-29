@@ -1,15 +1,15 @@
 .testing {
   color: white;
-  border-bottom: 0.1px solid #5f5b7c;
-  border-right: 0.1px solid #5f5b7c;
-  border-left: 0.1px solid #5f5b7c;
+  border-bottom: .1px solid #5f5b7c;
+  border-right: .1px solid #5f5b7c;
+  border-left: .1px solid #5f5b7c;
   border-radius: 8px;
 }
 
 .testing .navbar-brand {
-  font-size: 50px;
-  font-weight: bold;
-  color: #ffffff !important;
+  font-size: 50px; 
+  font-weight: bold; 
+  color:#ffffff !important;
 }
 
 .nav-links .nav-link {
@@ -24,9 +24,4 @@
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.navbar {
-  position: fixed;
-    top: 0;
-
-}
+} 
