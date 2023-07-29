@@ -1,3 +1,42 @@
 h1, .page-title {
     text-align: center;
-}
+  }
+  
+  .project-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .project-carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    max-height: 50vh; /* adjust this value as needed */
+    object-fit: contain;
+  }
+  
+  .project-info {
+    flex: 1;
+    overflow: auto;
+    padding: 1em;
+  }
+  
+  .control-prev.control-arrow,
+  .control-next.control-arrow {
+    color: black;
+  }
+  
+  .project-carousel .thumbs {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px; /* adjust this value as needed */
+  }
+  
