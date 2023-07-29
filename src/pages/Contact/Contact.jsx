@@ -12,7 +12,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
     setShowAlert(true);
     setName("");
     setEmail("");
