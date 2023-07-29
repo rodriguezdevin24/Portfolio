@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import "./home.css";
 
@@ -14,6 +15,7 @@ const Section = styled.div`
   font-size: 1.5em;
   margin-top: 150px;
   scroll-snap-align: center;
+  position: relative;
 `;
 
 
@@ -94,6 +96,7 @@ const LandingHome = () => {
         A Software Engineer.
       </motion.h2>
       <motion.p
+      className="landing-text"
         initial={{ x: "-100%" }}
         animate={{ x: "0%" }}
         transition={{ duration: 1.3, ease: "easeInOut", delay: 5.5 }}
@@ -101,6 +104,9 @@ const LandingHome = () => {
         From military medic to full-stack developer, I bring a unique,
         neurodivergent perspective and a passion for learning to my work.
       </motion.p>
+      <Link to="journeyHome" smooth={true} duration={500}>
+        <button className="scrollDown">V</button>
+      </Link>
     </Section>
   );
 };

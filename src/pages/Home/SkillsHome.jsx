@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-scroll";
+
 import htmlIcon from "../../data/Icons/html-icon.svg";
 import cssIcon from "../../data/Icons/css-icon.svg";
 import jsIcon from "../../data/Icons/js-icon.svg";
@@ -52,6 +54,7 @@ const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1em;
+  margin-bottom: 150px;
   @media (max-width: 768px) {
     grid-template-columns: repeat(
       2,
@@ -130,6 +133,9 @@ const SkillsHome = ({ id }) => {
             ))}
         </AnimatePresence>
       </SkillsGrid>
+      <Link to="projectHome" smooth={true} duration={500}>
+      <button className = "scrollDown">V</button>
+      </Link>
     </Section>
   );
 };

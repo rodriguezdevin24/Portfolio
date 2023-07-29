@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-scroll";
 //import { motion } from "framer-motion";
 
 import './home.css'
@@ -39,6 +40,8 @@ const MoreButton = styled.button`
   background-color: white;
   color: blue;
   cursor: pointer;
+  margin-top: 2em;
+  margin-bottom: 350px;
 `;
 // const pageVariants = {
 //   initial: {
@@ -63,6 +66,9 @@ const JourneyHome = ({ id }) => {
         Born and raised in New York, I discovered my passion for technology at a young age. After high school, I joined the military and became a medic. On a whim, I decided to try out software development and instantly fell in love. It's a passion I plan to pursue, whether professionally or as a hobby.
       </JourneyText>
       <MoreButton>Learn More About Me</MoreButton>
+      <Link to="skillsHome" smooth={true} duration={500}>
+      <button className = "scrollDown">V</button>
+      </Link>
     </Section>
   );
 };
