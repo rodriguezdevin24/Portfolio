@@ -37,6 +37,7 @@ const Contact = () => {
         data-netlify="true"
         onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="contact" />
         <motion.input
           className="contact-input"
           type="text"
