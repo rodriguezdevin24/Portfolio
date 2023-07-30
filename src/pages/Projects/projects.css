@@ -19,7 +19,7 @@ h1, .page-title {
   
   .carousel-image {
     max-width: 100%;
-    max-height: 50vh; /* adjust this value as needed */
+    max-height: 40vh; /* adjust this value as needed */
     object-fit: contain;
   }
   

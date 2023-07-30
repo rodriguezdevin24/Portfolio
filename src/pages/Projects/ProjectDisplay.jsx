@@ -9,7 +9,7 @@ const ProjectDisplay = ({ project }) => {
         className="project-carousel"
         showThumbs={true}
         autoPlay
-        interval={1000}
+        interval={7000}
         infiniteLoop
         defaultActiveIndex={0}
       >
@@ -24,6 +24,7 @@ const ProjectDisplay = ({ project }) => {
         ))}
       </Carousel>
       <div className="project-info">
+        <h4>{project.title}</h4>
         <p>{project.description}</p>
         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
           GitHub
