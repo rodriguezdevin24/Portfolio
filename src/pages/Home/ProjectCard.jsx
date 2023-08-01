@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import VanillaTilt from 'vanilla-tilt';
-import "./home.css";
+import React, { useRef, useEffect } from "react";
+import VanillaTilt from "vanilla-tilt";
 
-
-const ProjectCard = () => {
+const ProjectCard = ({ className }) => {
   const tiltRef = useRef();
 
   useEffect(() => {
@@ -18,8 +16,7 @@ const ProjectCard = () => {
   }, []);
 
   return (
-    <div ref={tiltRef} className="projectCard rgb">
-      {/* Content of the card goes here */}
+    <div ref={tiltRef} className={`projectCard rgb ${className}`}>
     </div>
   );
 };
