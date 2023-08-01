@@ -1,12 +1,18 @@
 //HireMe.jsx
 import React from "react";
-
+// import { Canvas } from "@react-three/fiber";
+// import { Stars } from "@react-three/drei";
 
 import "./about.css";
 
 const HireMe = () => {
   return (
     <div className="aboutPage">
+      {/* <Canvas style={{ position: "absolute" }}>
+        <Stars />
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+      </Canvas> */}
       <div className="hireMe">
         <h2 className="aboutTitle">Why Hire Me</h2>
         <p>
@@ -26,3 +32,4 @@ const HireMe = () => {
 };
 
 export default HireMe;
+

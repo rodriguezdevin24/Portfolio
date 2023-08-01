@@ -1,11 +1,17 @@
 import React from 'react';
-
+// import { Canvas } from "@react-three/fiber";
+// import {  Stars } from "@react-three/drei";
 
 import './about.css';
 
 const IntroJourney = () => {
     return (
         <div className="aboutPage">
+            {/* <Canvas style={{ position: "absolute" }}>
+          <Stars />
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+        </Canvas> */}
         <div className="intro-journey">
             <h2 className = "aboutTitle">Introduction and Journey into Tech</h2>
             <p>Hello! I'm a full-stack developer based in New York City with a background 
