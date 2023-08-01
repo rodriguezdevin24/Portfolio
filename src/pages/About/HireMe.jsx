@@ -32,3 +32,4 @@ const HireMe = () => {
 };
 
 export default HireMe;
+

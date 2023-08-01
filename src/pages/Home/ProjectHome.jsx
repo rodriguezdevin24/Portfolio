@@ -59,13 +59,12 @@ const ProjectHome = ({ id }) => {
         A preview of my current projects. Click below to find out more.
       </Subtitle>
       <CardContainer>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard className="project1" />
+        <ProjectCard className="project2" />
       </CardContainer>
       <ProjectsButton>View More Projects</ProjectsButton>
       <Link to="footerAnimation" smooth={true} duration={500}>
-      <button className = "scrollDown">V</button>
+        <button className="scrollDown">V</button>
       </Link>
     </Section>
   );
