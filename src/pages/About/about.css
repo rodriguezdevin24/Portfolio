@@ -33,7 +33,7 @@ p {
 .scrollDownTop {
     position: absolute;
     left: 50%;
-    bottom: 22vh;
+    bottom: 21%;
     transform: translateX(-50%);
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */

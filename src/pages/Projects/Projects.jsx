@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <div className="page-container">
       <motion.h1
-        className="page-title"
+        className="page-title projectMainTitle"
         style={{ color: "white" }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

@@ -7,7 +7,7 @@ const ProjectDisplay = ({ project }) => {
     <div className="project-display full height">
       <Carousel
         className="project-carousel"
-        showThumbs={true}
+        showThumbs={false}
         autoPlay
         interval={7000}
         infiniteLoop
@@ -24,21 +24,26 @@ const ProjectDisplay = ({ project }) => {
         ))}
       </Carousel>
       <div className="project-info">
-        <h4>{project.title}</h4>
-        <p>{project.description}</p>
-        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        <a
-          href={project.deployedLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Deployed Version
-        </a>
-      </div>
+  <h4 className="projectTitle">{project.title}</h4>
+  <p>{project.description}</p>
+  <div className="button-container">
+    <button className="project-button">
+      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </button>
+    <button className="project-button">
+      <a
+        href={project.deployedLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Deployed Version
+      </a>
+    </button>
+  </div>
+</div>
     </div>
   );
 };
-
 export default ProjectDisplay;
