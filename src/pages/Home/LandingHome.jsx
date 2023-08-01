@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import "./home.css";
 
 const Section = styled.div`
-  height: 100vh;
+  height: 90vh;
+  max-height: 90vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -13,9 +15,10 @@ const Section = styled.div`
   text-align: center;
   color: white;
   font-size: 1.5em;
-  margin-top: 150px;
+  position: relative;
   scroll-snap-align: center;
   position: relative;
+  padding-top: 150px;
 `;
 
 
@@ -35,15 +38,15 @@ const h1EnterFromBottomVariants = {
 };
 const subtitleVariants = {
   initial: {
-    opacity: 1,
+    opacity: 0,
     y: "100vh",
   },
   in: {
-    opacity: 1,
+    opacity: 0,
     y: 0,
   },
   out: {
-    opacity: 0,
+    opacity: 1,
     y: "-100vh",
   },
 };
@@ -105,7 +108,7 @@ const LandingHome = () => {
         neurodivergent perspective and a passion for learning to my work.
       </motion.p>
       <Link to="journeyHome" smooth={true} duration={500}>
-        <button className="scrollDown">V</button>
+        <button className="scrollDownJourney">V</button>
       </Link>
     </Section>
   );

@@ -38,6 +38,7 @@ const Section = styled.section`
   color: white;
   font-size: 1.5em;
   padding: 2em;
+  position: relative;
   padding-bottom: 100px;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens

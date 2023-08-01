@@ -14,6 +14,7 @@ const Section = styled.section`
   text-align: left;
   padding-left: 20%;
   background-color: #022945;
+  position: relative;
   color: white;
   font-size: 1.5em;
   padding: 4em;
@@ -43,20 +44,7 @@ const MoreButton = styled.button`
   margin-top: 2em;
   margin-bottom: 350px;
 `;
-// const pageVariants = {
-//   initial: {
-//     opacity: 1,
-//     y: "100vh",
-//   },
-//   in: {
-//     opacity: 1,
-//     y: 0,
-//   },
-//   out: {
-//     opacity: 0,
-//     y: "-100vh",
-//   },
-// };
+
 
 const JourneyHome = ({ id }) => {
   return (

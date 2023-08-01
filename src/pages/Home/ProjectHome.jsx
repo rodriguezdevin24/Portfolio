@@ -12,6 +12,7 @@ const Section = styled.section`
   color: white;
   font-size: 1.5em;
   padding: 4em;
+  position: relative;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
   }
@@ -30,7 +31,7 @@ const Subtitle = styled.p`
 `;
 const CardContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 2em;
   @media (max-width: 768px) { 

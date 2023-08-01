@@ -1,13 +1,14 @@
 import React from 'react'
-import '../../App.css'
 import { Canvas } from "@react-three/fiber";
 import {  Stars } from "@react-three/drei";
 import IntroJourney from './IntroJourney';
 import Education from './Education';
 import Goals from './Goals';
 import HireMe from './HireMe';
+ import { Element } from "react-scroll";
 
 import './about.css'
+import '../../App.css'
 
 
 const About= () => {
@@ -20,10 +21,18 @@ const About= () => {
           <pointLight position={[10, 10, 10]} />
         </Canvas>
         <h1 className = "about-title">A Little Bit About Me </h1>
+        <Element name="introJourney">
         <IntroJourney />
+        </Element>
+        <Element name="education">
         <Education />
+        </Element>
+        <Element name="goals">
         <Goals />
+        </Element>
+        <Element name="hireMe">
         <HireMe />
+        </Element>
     </div>
   )
 }

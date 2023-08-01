@@ -147,13 +147,13 @@
   opacity: 1;
 }
 .landing-title {
-font-size: 2.5em;
+  font-size: 2.5em;
   margin-bottom: 0.5em;
   margin-right:8px;
 }
 .landing-text{
   font-size: 1.5em;
-  margin-bottom: 300px;
+ 
 
 }
 
@@ -168,18 +168,31 @@ font-size: 2.5em;
 .scrollDown {
   position: absolute;
   left: 50%;
- 
+  bottom: 1%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.5); 
   border: none;
   border-radius: 5px;
   color: black;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  overflow: auto;
 }
 
-.scrollDown:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* less transparent white on hover */
+
+.scrollDownJourney {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
