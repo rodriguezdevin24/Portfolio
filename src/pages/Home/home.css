@@ -46,7 +46,7 @@
     inset: -3px;
     border-radius: 16px;
     filter: blur(8px);
-    transform: translateZ(-1px); /*or z-index */
+    transform: translateZ(-1px); 
     animation: rgb 6s linear infinite;
     border-radius: 18px; ;
   }

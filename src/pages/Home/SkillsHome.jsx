@@ -71,10 +71,7 @@ const Skill = styled(motion.div)`
   margin-bottom: 1.1em;
 `;
 
-const Icon = styled(motion.img)`
-  width: 24px;
-  height: 24px;
-`;
+
 
 const SkillsHome = ({ id }) => {
   const { ref, inView } = useInView({
@@ -136,7 +133,7 @@ const SkillsHome = ({ id }) => {
                 <Icon
                   src={skill.icon}
                   alt={skill.name}
-                  whileHover={{ scale: 2.7, rotate: 360 }}
+                  whileHover={{ scale: 2.4, rotate: 360 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />
                 {skill.name}
