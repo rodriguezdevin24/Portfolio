@@ -8,7 +8,7 @@ h1, .page-title {
     justify-content: space-between;
     height: 100vh;
     overflow: auto;
-    padding-top: 5em;
+    padding-top: 3.5em;
   }
   
   .project-carousel {
@@ -51,9 +51,9 @@ h1, .page-title {
   }
   .project-button {
     padding: 5px 15px;
-    margin: 10px;
+    
     position: relative;
-    background-color: #4CAF50; /* Green */
+    background-color: #bbbbbc; 
     border: none;
     color: white;
     text-align: right;
@@ -77,6 +77,9 @@ h1, .page-title {
   .button-container {
     display: flex;
     justify-content: flex-end;
-    gap: 10px; /* adjust as needed */
+    gap: 10px; 
+  }
+  .first-button {
+    bottom: 30%;
   }
   

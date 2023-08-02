@@ -82,6 +82,11 @@ const SkillsHome = ({ id }) => {
     threshold: [0.1, 0.1],
   });
 
+  const Icon = styled(motion.img)`
+  width: 35px;
+  height: 35px;
+`;
+
   const skills = [
     { name: "HTML", icon: htmlIcon },
     { name: "CSS", icon: cssIcon },
@@ -128,18 +133,22 @@ const SkillsHome = ({ id }) => {
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
               >
-                <Icon src={skill.icon} alt={skill.name} />
+                <Icon
+                  src={skill.icon}
+                  alt={skill.name}
+                  whileHover={{ scale: 2.7, rotate: 360 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                />
                 {skill.name}
               </Skill>
             ))}
         </AnimatePresence>
       </SkillsGrid>
       <Link to="projectHome" smooth={true} duration={500}>
-      <button className = "scrollDown">V</button>
+        <button className="scrollDown">V</button>
       </Link>
     </Section>
   );
 };
-
 
 export default SkillsHome;

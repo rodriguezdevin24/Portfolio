@@ -44,21 +44,23 @@ const Projects = () => {
           <ProjectDisplay project={project} />
           {index < projectsData.length - 1 && (
             <Link to={`project${index + 1}`} smooth={true} duration={500}>
-              <div style={{ position: "relative", height: "100%" }}>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "20px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                  }}
-                >
-                  <button style={{ backgroundColor: "red" }}>
-                    Scroll to next project
-                  </button>{" "}
-                </div>
+            <div style={{ position: "relative", height: "100%" }}>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: index === 0 ? "30px" : "20px", // adjust as needed
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+                className={index === 0 ? "first-button" : ""}
+              >
+                <button style={{ backgroundColor: "red" }}>
+                  Scroll to next project
+                </button>
               </div>
-            </Link>
+            </div>
+          </Link>
+          
           )}
         </Element>
       ))}
