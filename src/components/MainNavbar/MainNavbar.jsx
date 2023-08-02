@@ -9,10 +9,10 @@ import './navbar.css';
 
 const navbarVariants = {
   initial: {
-    x: '-100vw',
+    opacity: 0,
   },
   in: {
-    x: 0,
+    opacity: 1,
   },
 };
 

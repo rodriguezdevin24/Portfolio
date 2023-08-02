@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./projects.css";
 import "../../App.css";
 import { motion } from "framer-motion";
@@ -22,6 +22,10 @@ const pageVariants = {
 };
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="page-container">
       <motion.h1
@@ -54,7 +58,7 @@ const Projects = () => {
                 }}
                 className={index === 0 ? "first-button" : ""}
               >
-                <button style={{ backgroundColor: "red" }}>
+                <button className="nextProjectBtn">
                   Scroll to next project
                 </button>
               </div>

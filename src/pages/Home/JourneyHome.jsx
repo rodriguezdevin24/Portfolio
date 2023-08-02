@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+
 //import { motion } from "framer-motion";
 
 import './home.css'
@@ -47,13 +49,20 @@ const MoreButton = styled.button`
 
 
 const JourneyHome = ({ id }) => {
+  const navigate = useNavigate();
+
+  const handleMoreButtonClick = () => {
+    navigate('/about');
+  };
+
+
   return (
     <Section id={id}> 
       <Title>My Journey</Title>
       <JourneyText>
         Born and raised in New York, I discovered my passion for technology at a young age. After high school, I joined the military and became a medic. On a whim, I decided to try out software development and instantly fell in love. It's a passion I plan to pursue, whether professionally or as a hobby.
       </JourneyText>
-      <MoreButton>Learn More About Me</MoreButton>
+      <MoreButton onClick={handleMoreButtonClick} >Learn More About Me</MoreButton>
       <Link to="skillsHome" smooth={true} duration={500}>
       <button className = "scrollDown">V</button>
       </Link>

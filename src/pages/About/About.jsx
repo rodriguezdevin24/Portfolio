@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Canvas } from "@react-three/fiber";
 import {  Stars } from "@react-three/drei";
 import IntroJourney from './IntroJourney';
@@ -12,6 +12,10 @@ import '../../App.css'
 
 
 const About= () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     
     <div className = "page-container">

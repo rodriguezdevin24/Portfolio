@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { Link } from "react-scroll";
@@ -53,6 +54,12 @@ const ProjectsButton = styled.button`
 `;
 
 const ProjectHome = ({ id }) => {
+  const navigate = useNavigate();
+
+  const handleProjectClick = () => {
+    navigate('/projects');
+  };
+  
   return (
     <Section id={id}>
       <Title>Current Projects</Title>
@@ -63,7 +70,7 @@ const ProjectHome = ({ id }) => {
         <ProjectCard className="project1" />
         <ProjectCard className="project2" />
       </CardContainer>
-      <ProjectsButton>View More Projects</ProjectsButton>
+      <ProjectsButton onClick={handleProjectClick}>View More Projects</ProjectsButton>
       <Link to="footerAnimation" smooth={true} duration={500}>
         <button className="scrollDown">V</button>
       </Link>
