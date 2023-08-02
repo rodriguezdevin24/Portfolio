@@ -142,7 +142,7 @@ const SkillsHome = ({ id }) => {
         </AnimatePresence>
       </SkillsGrid>
       <Link to="projectHome" smooth={true} duration={500}>
-        <button className="scrollDown">V</button>
+        <motion.button className="scrollDown">V</motion.button>
       </Link>
     </Section>
   );

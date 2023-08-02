@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Alert } from "react-bootstrap";
 import "./contact.css";
 import "../../App.css";
@@ -18,6 +18,11 @@ const Contact = () => {
     setMessage("");
     setTimeout(() => setShowAlert(false), 6000);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div className="contact-container">
