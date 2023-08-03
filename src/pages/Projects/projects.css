@@ -50,18 +50,15 @@ h1, .page-title {
     margin-left: 20px; /* adjust this value as needed */
   }
   .project-button {
-    padding: 5px 15px;
-    
-    position: relative;
-    background-color: #bbbbbc; 
+    font-size: 1em;
+    padding: 0.5em 1em;
     border: none;
-    color: white;
-    text-align: right;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
+    border-radius: 5px;
+    background-color: white;
+    color: blue;
     cursor: pointer;
+    margin-top: 2em;
+    margin-bottom: 0;
   }
   
   .project-button:hover {
@@ -78,8 +75,10 @@ h1, .page-title {
     display: flex;
     justify-content: flex-end;
     gap: 10px; 
+    margin-bottom: 0;
   }
   .first-button {
-    bottom: 30%;
+    position: absolute;
+    bottom: 25%;
   }
   

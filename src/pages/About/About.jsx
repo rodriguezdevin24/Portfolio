@@ -5,10 +5,12 @@ import IntroJourney from './IntroJourney';
 import Education from './Education';
 import Goals from './Goals';
 import HireMe from './HireMe';
- import { Element } from "react-scroll";
+import { Element } from "react-scroll";
+import SkillsHome from './SkillsAbout';
 
 import './about.css'
 import '../../App.css'
+
 
 
 const About= () => {
@@ -30,6 +32,9 @@ const About= () => {
         </Element>
         <Element name="education">
         <Education />
+        </Element>
+        <Element name="skills">
+        <SkillsHome />
         </Element>
         <Element name="goals">
         <Goals />

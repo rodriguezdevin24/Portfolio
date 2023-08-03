@@ -63,7 +63,7 @@ const JourneyHome = ({ id }) => {
         Born and raised in New York, I discovered my passion for technology at a young age. After high school, I joined the military and became a medic. On a whim, I decided to try out software development and instantly fell in love. It's a passion I plan to pursue, whether professionally or as a hobby.
       </JourneyText>
       <MoreButton onClick={handleMoreButtonClick} >Learn More About Me</MoreButton>
-      <Link to="skillsHome" smooth={true} duration={500}>
+      <Link to="projectHome" smooth={true} duration={500}>
       <button className = "scrollDown">V</button>
       </Link>
     </Section>
