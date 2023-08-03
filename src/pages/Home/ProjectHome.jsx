@@ -11,8 +11,8 @@ const Section = styled.section`
   justify-content: start;
   align-items: center;
   color: white;
-  font-size: 1.5em;
-  padding: 4em;
+  font-size: 1.5rem;
+  padding: 4rem;
   position: relative;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
@@ -20,21 +20,21 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5em;
+  font-size: 2.5rem;
   text-align: center;
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-align: center;
   max-width: 800px;
-  margin-top: 1em;
+  margin-top: 1rem;
 `;
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 2rem;
   @media (max-width: 768px) { 
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,14 +42,14 @@ const CardContainer = styled.div`
 `;
 
 const ProjectsButton = styled.button`
-  font-size: 1em;
-  padding: 0.5em 1em;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   background-color: white;
   color: blue;
   cursor: pointer;
-  margin-top: 2em;
+  margin-top: 2rem;
   margin-bottom: 100px;
 `;
 

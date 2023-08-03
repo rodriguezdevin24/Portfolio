@@ -14,7 +14,7 @@ const Section = styled.div`
   align-items: center;
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   position: relative;
   scroll-snap-align: center;
   position: relative;

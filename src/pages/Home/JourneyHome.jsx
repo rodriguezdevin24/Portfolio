@@ -18,32 +18,32 @@ const Section = styled.section`
   background-color: #022945;
   position: relative;
   color: white;
-  font-size: 1.5em;
-  padding: 4em;
+  font-size: 1.5rem;
+  padding: 4rem;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
   }
 `;
 
 const Title = styled.h1`
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 const JourneyText = styled.p`
-  font-size: 1.2em;
-  margin-bottom: 2em;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 `;
 
 const MoreButton = styled.button`
-  font-size: 1em;
-  padding: 0.5em 1em;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   background-color: white;
   color: blue;
   cursor: pointer;
-  margin-top: 2em;
+  margin-top: 2rem;
   margin-bottom: 350px;
 `;
 
