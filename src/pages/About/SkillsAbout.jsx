@@ -36,8 +36,8 @@ const Section = styled.section`
   text-align: center;
   background-color: #022945;
   color: white;
-  font-size: 1.5em;
-  padding: 2em;
+  font-size: 1.5rem;
+  padding: 2rem;
   position: relative;
   padding-bottom: 100px;
   @media (min-width: 769px) {
@@ -46,7 +46,7 @@ const Section = styled.section`
 `;
 
 const Title = styled(motion.h1)`
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-top: 50px;
 `;
 
@@ -54,7 +54,7 @@ const SkillsGrid = styled.div`
   margin-top: 150px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1em;
+  gap: 1rem;
   margin-bottom: 150px;
   @media (max-width: 768px) {
     grid-template-columns: repeat(
@@ -67,8 +67,8 @@ const Skill = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5em;
-  margin-bottom: 1.1em;
+  gap: 1.5rem;
+  margin-bottom: 1.1rem;
 `;
 
 
