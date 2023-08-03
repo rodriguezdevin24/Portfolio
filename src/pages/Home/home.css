@@ -101,20 +101,22 @@
   }
   
   .contact-button {
-    margin-top: 20px;
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 1.5vw;
-    color: #022741;
-    background-color: #ffffff;
+    background-color: #022945; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease;
   }
   
   .contact-button:hover {
-    background-color: #010b23;
+    background-color: #f8f8f8; /* Lighter color on hover */
+    color: black;
   }
+  
   .footer-wrapper {
     position: absolute;
     bottom: 0;
