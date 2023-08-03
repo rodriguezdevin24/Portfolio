@@ -4,7 +4,7 @@ import "../../App.css";
 import { motion } from "framer-motion";
 import projectsData from "./projectData";
 import ProjectDisplay from "./ProjectDisplay";
-import { Link, Element, scroller } from "react-scroll";
+import {  Element, scroller } from "react-scroll";
 
 const pageVariants = {
   initial: {
