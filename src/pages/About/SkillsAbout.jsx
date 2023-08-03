@@ -73,7 +73,7 @@ const Skill = styled(motion.div)`
 
 
 
-const SkillsHome = ({ id }) => {
+const SkillsAbout = ({ id }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: [0.1, 0.1],
@@ -141,11 +141,13 @@ const SkillsHome = ({ id }) => {
             ))}
         </AnimatePresence>
       </SkillsGrid>
-      <Link to="projectHome" smooth={true} duration={500}>
-        <motion.button className="scrollDown">V</motion.button>
-      </Link>
+      <Link to="goals" smooth={true} duration={500}>
+        <button className ="scrollDown">
+          Scroll to next section
+        </button>
+        </Link>
     </Section>
   );
 };
 
-export default SkillsHome;
+export default SkillsAbout;

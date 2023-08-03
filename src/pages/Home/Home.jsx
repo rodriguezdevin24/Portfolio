@@ -2,7 +2,6 @@ import React from 'react'
 import LandingHome from './LandingHome';
 import JourneyHome from './JourneyHome';
 import ProjectHome from './ProjectHome';
-import SkillsHome from './SkillsHome';
 import styled from 'styled-components';
 import FooterAnimation from './FooterHome';
 import { Element } from "react-scroll";
@@ -17,9 +16,6 @@ const Home = () => {
       </Element>
       <Element name="journeyHome">
         <JourneyHome />
-      </Element>
-      <Element name="skillsHome">
-        <SkillsHome />
       </Element>
       <Element name="projectHome">
         <ProjectHome />

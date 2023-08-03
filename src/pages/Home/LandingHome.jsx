@@ -53,7 +53,7 @@ const subtitleVariants = {
 
 const h1SlideFromRightVariants = {
   initial: {
-    x: "-30vw",
+    x: "-60vw",
      opacity: 0,
   },
   animate: {
@@ -104,8 +104,7 @@ const LandingHome = () => {
         animate={{ x: "0%" }}
         transition={{ duration: 1.3, ease: "easeInOut", delay: 5.5 }}
       >
-        From military medic to full-stack developer, I bring a unique,
-        neurodivergent perspective and a passion for learning to my work.
+        From military medic to full-stack developer, I bring a unique perspective and a passion for learning to my work.
       </motion.p>
       <Link to="journeyHome" smooth={true} duration={500}>
         <button className="scrollDownJourney">V</button>

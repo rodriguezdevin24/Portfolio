@@ -40,7 +40,7 @@ function MainNavbar() {
           <Nav.Link href="/home">Home</Nav.Link>
           <Nav.Link href="/projects">Projects</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link href="mailto:rodriguezdevin24@gmail.com">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
