@@ -12,13 +12,13 @@
     font-family: roboto;
     text-align: justify;
     cursor: pointer;
-    margin: 30px;
+    margin: 1.88rem;
     transform-style: preserve-3d;
-    transform: perspective(1000px);
+    transform: perspective(62.5rem);
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     height: 18.75rem;
-    padding: 20px;
+    padding: 1.25rem;
     position: relative;
     @media (max-width: 768px) {
         max-width: 90%; 
@@ -98,7 +98,7 @@
   
   .contact-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.6rem 1.25rem;
     background-color: #022945; /* Button color */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
@@ -122,7 +122,7 @@
 /* ScrollButton.css */
 .scroll-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 1.25rem;
   z-index: 100;
   background: none;
   border: none;
@@ -132,8 +132,8 @@
 
 .scroll-button .arrow {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 1.88rem;
+  height: 1.88rem;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transform: rotate(45deg);
@@ -147,7 +147,7 @@
 .landing-title {
   font-size: 3.5rem !important;
   margin-bottom: 0.5rem;
-  margin-right:8px;
+  margin-right: 0.5rem;
 }
 .landing-text{
   font-size: 2rem;
@@ -168,12 +168,12 @@
   left: 50%;
   bottom: 1%;
   transform: translateX(-50%);
-  padding: 10px 20px;
+  padding: 0.6rem 1.25rem;
   background-color: rgba(255, 255, 255, 0.5); 
   border: none;
   border-radius: 5px;
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   overflow: auto;
@@ -190,12 +190,12 @@
   left: 50%;
   bottom: 0.1875rem;
   transform: translateX(-50%);
-  padding: 10px 20px;
+  padding: 0.6rem 1.25rem;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 5px;
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

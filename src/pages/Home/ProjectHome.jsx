@@ -25,9 +25,9 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 50rem;
   margin-top: 1rem;
 `;
 const CardContainer = styled.div`
@@ -50,7 +50,7 @@ const ProjectsButton = styled.button`
   color: blue;
   cursor: pointer;
   margin-top: 2rem;
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 `;
 
 const ProjectHome = ({ id }) => {

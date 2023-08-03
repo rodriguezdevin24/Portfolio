@@ -51,11 +51,11 @@ const Title = styled(motion.h1)`
 `;
 
 const SkillsGrid = styled.div`
-  margin-top: 150px;
+  margin-top: 9.375rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  margin-bottom: 150px;
+  margin-bottom: 9.375rem;
   @media (max-width: 768px) {
     grid-template-columns: repeat(
       2,
@@ -80,8 +80,8 @@ const SkillsAbout = ({ id }) => {
   });
 
   const Icon = styled(motion.img)`
-  width: 35px;
-  height: 35px;
+  width: 2.19rem;
+  height: 2.19rem;
 `;
 
   const skills = [

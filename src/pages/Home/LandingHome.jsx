@@ -19,7 +19,7 @@ const Section = styled.div`
   position: relative;
   scroll-snap-align: center;
   position: relative;
-  padding-top: 150px;
+  padding-top: 9.38rem;
 `;
 
 
