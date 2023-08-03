@@ -32,6 +32,7 @@ h1, .page-title {
     overflow: auto;
     padding: 1em;
     margin-right: 1em;
+    font-size: .8rem;
   }
   .projectTitle {
     font-size: 2em;
@@ -53,7 +54,7 @@ h1, .page-title {
     font-size: 1em;
     padding: 0.5em 1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 1.25rem;
     background-color: white;
     color: blue;
     cursor: pointer;
@@ -74,7 +75,7 @@ h1, .page-title {
   .button-container {
     display: flex;
     justify-content: flex-end;
-    gap: 10px; 
+    gap: 0.625rem; 
     margin-bottom: 0;
   }
   .nextProjectBtn {
@@ -87,7 +88,7 @@ h1, .page-title {
     border: none;
     border-radius: 5px;
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     overflow: auto;
