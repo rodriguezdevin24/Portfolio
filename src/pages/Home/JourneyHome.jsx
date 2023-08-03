@@ -44,7 +44,7 @@ const MoreButton = styled.button`
   color: blue;
   cursor: pointer;
   margin-top: 2rem;
-  margin-bottom: 350px;
+  margin-bottom: 21.88rem;
 `;
 
 
