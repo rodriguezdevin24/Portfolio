@@ -3,11 +3,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "../../components/Footer/Footer";
 import { Canvas } from "@react-three/fiber";
-import {  Stars } from "@react-three/drei";
-
+import { Stars } from "@react-three/drei";
 
 import "./home.css";
-
 
 const FooterAnimation = () => {
   const controls = useAnimation();
@@ -24,11 +22,8 @@ const FooterAnimation = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
-  
 
-  
   return (
-   
     <div ref={ref} className="body">
       <motion.div
         className="dot"
@@ -39,7 +34,7 @@ const FooterAnimation = () => {
           hidden: { clipPath: `circle(0%)`, transition: { duration: 1 } },
         }}
       >
-          <Canvas style={{ position: "absolute" }}>
+        <Canvas style={{ position: "absolute" }}>
           <Stars />
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
@@ -65,8 +60,10 @@ const FooterAnimation = () => {
               hidden: { y: "100%", opacity: 0 },
             }}
           >
-            <button className="contact-button">Get in contact</button>
+            <a href="mailto:rodriguezdevin24@gmail.com" className="contact-button">Get in contact
+            </a>
           </motion.div>
+
           <motion.div
             animate={controls}
             initial="hidden"
@@ -91,8 +88,7 @@ const FooterAnimation = () => {
         </div>
       </motion.div>
     </div>
- 
- );
+  );
 };
 
 export default FooterAnimation;
