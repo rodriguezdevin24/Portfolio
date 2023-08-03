@@ -8,8 +8,7 @@
     padding: 20px 0;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    margin-bottom: 20px; 
+    width: 100%; 
     position: absolute;
   }
   
@@ -32,7 +31,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    margin-bottom: 20px; 
 }
 .footer-black a {
     color: #fff !important;

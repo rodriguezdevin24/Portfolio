@@ -1,7 +1,9 @@
+// LandingHome.jsx
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+
 import "./home.css";
 
 const Section = styled.div`
@@ -14,7 +16,6 @@ const Section = styled.div`
   align-items: center;
   text-align: center;
   color: white;
-  font-size: 1.5rem;
   position: relative;
   scroll-snap-align: center;
   position: relative;
@@ -53,7 +54,7 @@ const subtitleVariants = {
 
 const h1SlideFromRightVariants = {
   initial: {
-    x: "-60vw",
+    x: "-30vw",
      opacity: 0,
   },
   animate: {
@@ -66,7 +67,7 @@ const h1SlideFromRightVariants = {
 const LandingHome = () => {
   return (
     <Section>
-      <div style={{ display: 'flex', justifyContent: 'center', padding: "5px" }}>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: "40px" }}>
       <motion.h1
         className="landing-title"
         variants={h1EnterFromBottomVariants}
@@ -100,7 +101,7 @@ const LandingHome = () => {
       </motion.h2>
       <motion.p
       className="landing-text"
-        initial={{ x: "-100%" }}
+        initial={{ x: "-170%" }}
         animate={{ x: "0%" }}
         transition={{ duration: 1.3, ease: "easeInOut", delay: 5.5 }}
       >

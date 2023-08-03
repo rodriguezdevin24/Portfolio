@@ -65,7 +65,7 @@ const Projects = () => {
           position: "fixed",
           bottom: "1%",
           left: "50%",
-          transform: "translateX(-50%)",
+          transform: "translateX(-40%)",
           
           
         }}

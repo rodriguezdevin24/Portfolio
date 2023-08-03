@@ -94,11 +94,7 @@
     height: 100%;
   }
   
-  .title {
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    text-align: center;
-  }
+
   
   .contact-button {
     display: inline-block;
@@ -149,12 +145,12 @@
   opacity: 1;
 }
 .landing-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem !important;
   margin-bottom: 0.5rem;
   margin-right:8px;
 }
 .landing-text{
-  font-size: 1.5rem;
+  font-size: 2rem;
  
 
 }
@@ -163,7 +159,7 @@
 
 
 .landing-subtitle {
-  font-size: 1.2em;
+  font-size: 2.5em;
   margin-bottom: 2rem;
 }
 
@@ -192,7 +188,7 @@
 .scrollDownJourney {
   position: absolute;
   left: 50%;
-  bottom: 3%;
+  bottom: 0.1875rem;
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -207,4 +203,12 @@
   background-color: #f8f8f8; 
   color: black; 
   border: 2px solid #4CAF50;
+}
+.starsText {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+.starsUpText {
+  margin-bottom:5rem;
 }

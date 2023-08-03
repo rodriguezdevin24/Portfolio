@@ -50,7 +50,7 @@ const ProjectDisplay = ({ project, delay = 0 }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Deployed Version
+              Deployed
             </a>
           </button>
         </div>

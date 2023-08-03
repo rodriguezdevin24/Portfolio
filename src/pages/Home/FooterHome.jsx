@@ -43,6 +43,7 @@ const FooterAnimation = () => {
           <h1 className="title">
             <motion.div
               animate={controls}
+              className= "starsUpText"
               initial="hidden"
               variants={{
                 visible: { y: "0%", opacity: 1, transition: { delay: 1 } },
@@ -66,6 +67,7 @@ const FooterAnimation = () => {
 
           <motion.div
             animate={controls}
+            className="starsText"
             initial="hidden"
             variants={{
               visible: { y: "0%", opacity: 1, transition: { delay: 2 } },
