@@ -99,7 +99,7 @@
   .contact-button {
     display: inline-block;
     padding: 0.6rem 1.25rem;
-    background-color: #022945; /* Button color */
+    background-color: #022945; 
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
     border: none;

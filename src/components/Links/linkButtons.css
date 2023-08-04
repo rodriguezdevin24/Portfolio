@@ -2,8 +2,9 @@
     position: fixed;
     bottom: 1%;
     left: 20px;
-    padding: 0.31rem 1.25rem;
-    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 0.31rem .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+
     border: none;
     border-radius: 0.31rem;
     text-decoration: none;

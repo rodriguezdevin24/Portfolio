@@ -15,7 +15,8 @@ const Section = styled.section`
   align-items: flex-start;
   text-align: left;
   padding-left: 20%;
-  background-color: #022945;
+  background-image: url("https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
   position: relative;
   color: white;
   font-size: 1.5rem;
