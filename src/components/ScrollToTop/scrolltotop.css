@@ -1,26 +1,45 @@
 .scroll-to-top {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
-    cursor: pointer;
-  }
-  
-  .scroll-to-top div {
-    position: relative;
-  }
-  
-  .scroll-to-top p {
-    display: none;
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    background: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  .scroll-to-top div:hover p {
-    display: block;
-  }
-  
+  position: fixed;
+  bottom: 1%;
+  right: 1.25rem;
+  cursor: pointer;
+  padding: 0.31rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2) ;
+  text-decoration: none;
+  border-radius: 0.31rem;
+}
+
+.scroll-to-top div {
+  position: relative;
+}
+
+.scroll-to-top p {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  text-align: center;
+  width: 10rem;
+}
+
+.scroll-to-top div:hover p {
+  display: block;
+}
+/* .scrollUpBtn {
+  position: fixed;
+  bottom: 1%;
+  left: 8.85rem;
+  padding: 0.31rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 0.31rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  overflow: auto;
+  cursor: pointer;
+  color: black;
+} */
