@@ -1,9 +1,9 @@
 .fixed-button {
     position: fixed;
     bottom: 1%;
-    left: 20px;
-    padding: 0.31rem 1.25rem;
-    background-color: rgba(255, 255, 255, 0.5); 
+    left: 8.85rem;
+    padding: 0.31rem .5rem;
+    background-color: rgba(255, 255, 255, 0.3);
     border: none;
     border-radius: 0.31rem;
     text-decoration: none;
@@ -15,6 +15,50 @@
   }
   
   .fixed-button:hover {
+    background-color: #f8f8f8; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+.fixed-button2 {
+    position: fixed;
+    bottom: 1%;
+    left: 20px;
+    padding: 0.31rem .5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 0.31rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    overflow: auto;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .fixed-button2:hover {
+    background-color: #f8f8f8; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+.fixed-button3 {
+    position: fixed;
+    bottom: 1%;
+    left: 5rem;
+    padding: 0.31rem .5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 0.31rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    overflow: auto;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .fixed-button3:hover {
     background-color: #f8f8f8; 
     color: black; 
     border: 2px solid #4CAF50;

@@ -4,7 +4,7 @@ import "../../App.css";
 import { motion } from "framer-motion";
 import projectsData from "./projectData";
 import ProjectDisplay from "./ProjectDisplay";
-import {  Element, scroller } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 
 const pageVariants = {
   initial: {
@@ -66,12 +66,14 @@ const Projects = () => {
           bottom: "1%",
           left: "50%",
           transform: "translateX(-40%)",
-          
-          
         }}
       >
         <button className="nextProjectBtn" onClick={handleButtonClick}>
-          Next Project
+          <img
+            src="/down-icon.png"
+            alt="Down"
+            style={{ width: "30px", height: "30px" }}
+          />
         </button>
       </div>
     </div>

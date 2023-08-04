@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import "./home.css";
 
 const Section = styled.div`
-  height: 90vh;
-  max-height: 90vh;
+  height: 92vh;
+  max-height: 92vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,8 @@ const Section = styled.div`
   color: white;
   position: relative;
   scroll-snap-align: center;
+  background-image: url"https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  background-size: cover;
   position: relative;
   padding-top: 9.38rem;
 `;

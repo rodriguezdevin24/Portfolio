@@ -84,8 +84,8 @@ h1, .page-title {
     left: 50%;
     bottom: 2%;
     transform: translateX(-50%);
-    padding: .31rem 3.13rem;
-    background-color: rgba(255, 255, 255, 0.5); 
+    padding: .31rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1); 
     border: none;
     border-radius: 5px;
     color: black;
@@ -93,12 +93,11 @@ h1, .page-title {
     cursor: pointer;
     transition: background-color 0.3s ease;
     overflow: auto;
-    min-width: 9.38rem;
     white-space: nowrap;
   }
-  .nextProjectBtn:hover {
+  /* .nextProjectBtn:hover {
     background-color: #f8f8f8; 
     color: black; 
     border: 2px solid #4CAF50;
   }
-  
+   */

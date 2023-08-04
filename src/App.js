@@ -7,6 +7,10 @@ import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import ResumeLink from "./components/Links/ResumeLink";
+import GithubLink from "./components/Links/GithubLink";
+import LinkedInLink from "./components/Links/LinkedInLink";
+import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
+// import { Scroll } from "@react-three/drei";
 
 
 //TO ADD A REVIEW SECTION WHERE PEOPLE CAN LEAVE REVIEWS
@@ -23,8 +27,11 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <GithubLink />
+        <LinkedInLink />
         <ResumeLink />
-        
+        <ScrollToTopButton />
+
       </>
     </Router>
   );
