@@ -31,7 +31,13 @@ const ScrollToTopButton = () => {
       {isVisible && 
         <div onClick={scrollToTop}>
           <p>Scroll to top</p>
-          <button>^</button>
+        
+          <img
+            src="/down-icon.png"
+            alt="Down"
+            style={{ width: "30px", height: "30px", rotate: "180deg" }}
+          />
+      
         </div>}
     </div>
   );

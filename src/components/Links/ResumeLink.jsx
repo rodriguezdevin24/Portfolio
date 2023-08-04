@@ -7,7 +7,7 @@ const ResumeLink = () => {
        target="_blank" 
        rel="noopener noreferrer" 
        className="fixed-button">
-       <img src="/resume-icon.png" alt="Resume" style={{width: '40px', height: '40px'}} />
+       <img src="/resume-icon.png" alt="Resume" style={{width: '30px', height: '30px'}} />
     
     </a>
   );

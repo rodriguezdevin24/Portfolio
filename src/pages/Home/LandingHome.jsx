@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import "./home.css";
 
 const Section = styled.div`
-  height: 90vh;
-  max-height: 90vh;
+  height: 92vh;
+  max-height: 92vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
