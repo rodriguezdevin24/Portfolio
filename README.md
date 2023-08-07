@@ -2,6 +2,8 @@
 
 https://devin-rodriguez.netlify.app/
 
+This is my portfolio site. 
+
 ## Available Scripts
 
 In the project directory, you can run:
