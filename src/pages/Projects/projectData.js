@@ -63,7 +63,7 @@ const projectsData = [
     images: [tb1, tb2, tb3, tb4, ],
     description:
     "Task Buckets, a playful application developed a mere two weeks into my coding adventure, gamifies everyday tasks. Using Vanilla JavaScript, JSON, and local storage, it encourages users to outperform their previous day's achievements, all visualized through a basketball game. It's not just about tasks; it's about making them fun. If you're looking to score more details on Task Buckets, the GitHub README is the court to be on.",
-    githubLink: "https://github.com/user/project1",
+    githubLink: "https://github.com/rodriguezdevin24/Task-Buckets",
     deployedLink: "https://project1.com",
     title: "Task Buckets",
   },

@@ -5,7 +5,6 @@ import ProjectHome from './ProjectHome';
 import styled from 'styled-components';
 import FooterAnimation from './FooterHome';
 import { Element, scroller } from "react-scroll";
-import Footer from '../../components/Footer/Footer';
 
 const Container = styled.div``;
 
@@ -58,7 +57,6 @@ const Home = () => {
       </Element>
       <Element name="footerAnimation">
         <FooterAnimation />
-        <Footer />
       </Element>
       {showButton && (
         <div
