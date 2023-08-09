@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useGLTF } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import computer from "./old_computer.glb";
+import computer from "./computer_monitor.glb";
 
 import "./home.css";
 

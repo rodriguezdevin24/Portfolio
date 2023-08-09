@@ -3,17 +3,22 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "../../components/Footer/Footer";
 import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
+import space from "./space.glb";
 
 import "./home.css";
 
 const FooterAnimation = () => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({
+  const { ref: inViewRef, inView } = useInView({
     threshold: 0.8,
   });
 
-  console.log("Is in view:", inView);
+
+  const { nodes, animations } = useGLTF(space);
+  
+  const { ref } = useAnimation(animations, nodes.Sketchfab_model);
 
   useEffect(() => {
     if (inView) {
@@ -24,7 +29,7 @@ const FooterAnimation = () => {
   }, [controls, inView]);
 
   return (
-    <div ref={ref} className="body">
+    <div ref={inViewRef} className="body">
       <motion.div
         className="dot"
         animate={controls}
@@ -34,34 +39,49 @@ const FooterAnimation = () => {
           hidden: { clipPath: `circle(0%)`, transition: { duration: 1 } },
         }}
       >
+        <div className="space-container">
+        <div className="interactive-indicator">
+  Click and drag up here to interact
+</div>
         <Canvas style={{ position: "absolute" }}>
-          <Stars />
+          <primitive
+            ref={ref}
+            object={nodes.Sketchfab_model}
+            position={[-90, -90, 89]}
+            scale={[0.7, 0.7, 0.8]}
+          />
           <ambientLight />
-          <pointLight position={[10, 10, 10]} />
+          <pointLight position={[5, 5, 5]} />
+          <OrbitControls enablePan={true} panSpeed={0.5} />
         </Canvas>
+        </div>
         <div className="content">
           <h1 className="title">
             <motion.div
               animate={controls}
-              className= "starsUpText"
+              className="starsUpText"
               initial="hidden"
               variants={{
                 visible: { y: "0%", opacity: 1, transition: { delay: 1 } },
                 hidden: { y: "100%", opacity: 0 },
               }}
             >
-              If you like what you see, come embark with me on my journey!
+              Come explore my universe and embark with me on my journey!
             </motion.div>
           </h1>
           <motion.div
             animate={controls}
             initial="hidden"
             variants={{
-              visible: { y: "0%", opacity: 1, transition: { delay: 1.5 } },
+              visible: { y: "0%", opacity: 1, transition: { delay: 1.5 }, paddingTop: "10rem" },
               hidden: { y: "100%", opacity: 0 },
             }}
           >
-            <a href="mailto:rodriguezdevin24@gmail.com" className="contact-button">Get in contact
+            <a
+              href="mailto:rodriguezdevin24@gmail.com"
+              className="contact-button"
+            >
+              Get in contact
             </a>
           </motion.div>
 
