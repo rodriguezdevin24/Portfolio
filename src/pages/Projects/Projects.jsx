@@ -1,82 +1,20 @@
-import React, { useEffect, useState } from "react";
-import "./projects.css";
-import "../../App.css";
-import { motion } from "framer-motion";
-import projectsData from "./projectData";
-import ProjectDisplay from "./ProjectDisplay";
-import { Element, scroller } from "react-scroll";
+// Project.jsx
 
-const pageVariants = {
-  initial: {
-    opacity: 1,
-    y: "100vh",
-  },
-  in: {
-    opacity: 1,
-    y: 0,
-  },
-  out: {
-    opacity: 0,
-    y: "-100vh",
-  },
-};
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import projectsData from './projectData';
+import ProjectDisplay from './ProjectDisplay';
 
 const Projects = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-
-  const handleButtonClick = () => {
-    const nextProjectIndex = (currentProjectIndex + 1) % projectsData.length;
-    setCurrentProjectIndex(nextProjectIndex);
-
-    scroller.scrollTo(`project${nextProjectIndex}`, {
-      duration: 500,
-      smooth: true,
-    });
-  };
-
   return (
-    <div className="page-container">
-      <motion.h1
-        className="page-title projectMainTitle"
-        style={{ color: "white" }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        variants={{ pageVariants }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-          delay: 1.1,
-        }}
-      >
-        Current Projects
-      </motion.h1>
+    <Carousel>
       {projectsData.map((project, index) => (
-        <Element name={`project${index}`} key={index}>
-          <ProjectDisplay project={project} delay={index === 0 ? 1.8 : 0} />
-        </Element>
+        <div key={index}>
+          <ProjectDisplay project={project} />
+        </div>
       ))}
-      <div
-        style={{
-          position: "fixed",
-          bottom: "1%",
-          left: "50%",
-          transform: "translateX(-40%)",
-        }}
-      >
-        <button className="nextProjectBtn" onClick={handleButtonClick}>
-          <img
-            src="/down-icon.png"
-            alt="Down"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </button>
-      </div>
-    </div>
+    </Carousel>
   );
 };
 
