@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Link } from "react-scroll";
 
 import htmlIcon from "../../data/Icons/html-icon.svg";
 import cssIcon from "../../data/Icons/css-icon.svg";
@@ -34,7 +33,6 @@ const Section = styled.section`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  background-color: #022945;
   color: white;
   font-size: 1.5rem;
   padding: 2rem;
@@ -141,11 +139,6 @@ const SkillsAbout = ({ id }) => {
             ))}
         </AnimatePresence>
       </SkillsGrid>
-      <Link to="goals" smooth={true} duration={500}>
-        <button className ="scrollDown">
-          Scroll to next section
-        </button>
-        </Link>
     </Section>
   );
 };

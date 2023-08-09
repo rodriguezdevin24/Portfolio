@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Footer from "../../components/Footer/Footer";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
@@ -41,8 +40,14 @@ const FooterAnimation = () => {
       >
         <div className="space-container">
         <div className="interactive-indicator">
-  Click and drag up here to interact
+  Click and drag above to interact
 </div>
+<motion.div
+      initial={{ scale: 0 }} // Start from no scale (invisible)
+      animate={{ scale: 1 }} // Animate to original size
+      transition={{ duration: 10 }} // Duration of 1 second
+    >
+     
         <Canvas style={{ position: "absolute" }}>
           <primitive
             ref={ref}
@@ -54,6 +59,7 @@ const FooterAnimation = () => {
           <pointLight position={[5, 5, 5]} />
           <OrbitControls enablePan={true} panSpeed={0.5} />
         </Canvas>
+    </motion.div>
         </div>
         <div className="content">
           <h1 className="title">
@@ -105,7 +111,6 @@ const FooterAnimation = () => {
               hidden: { y: "100%", opacity: 0 },
             }}
           >
-            <Footer className="footer-black" />
           </motion.div>
         </div>
       </motion.div>
