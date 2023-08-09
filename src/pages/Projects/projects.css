@@ -1,115 +1,114 @@
-h1, .page-title {
-    text-align: center;
-  }
-  
-  .project-display {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100vh;
-    overflow: auto;
-    padding-top: 3.5rem;
-  }
-  
-  .project-carousel {
-    flex: .8;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-  }
-  
-  .carousel-image {
-    max-width: 100%;
-    max-height: 100%; /* adjust this value as needed */
-    object-fit: contain;
-    padding-left: 2rem;
-    padding-top: 6rem;
-    padding-right: 1rem;
-  }
-  
-  .project-info {
-    flex: 1.1;
-    overflow: auto;
-    padding: 1rem;
-    margin-right: 1rem;
-    font-size: .8rem;
-  }
-  .projectTitle {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: .5rem;
-  }
+h1,
+.page-title {
+  text-align: center;
+}
 
-  .control-prev.control-arrow,
-  .control-next.control-arrow {
-    color: black;
+.project-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1.25rem;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.project-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
+
+.project-button a {
+  color: inherit;
+  text-decoration: none;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  margin-bottom: 0;
+}
+.nextProjectBtn {
+  position: absolute;
+  left: 47%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  padding: 0.31rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: auto;
+  white-space: nowrap;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
   }
-  
-  /* .project-carousel .thumbs {
-    display: flex;
-    justify-content: center;
-    margin-left: 1px; 
+  40% {
+    transform: translateX(-50%) translateY(-5px);
   }
-   */
-  .project-button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 1.25rem;
-    background-color: white;
-    color: blue;
-    cursor: pointer;
-    margin-top: 2rem;
-    margin-bottom: 0;
+  60% {
+    transform: translateX(-50%) translateY(-3px);
   }
-  
-  .project-button:hover {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  
-  .project-button a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .button-container {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.625rem; 
-    margin-bottom: 0;
-  }
-  .nextProjectBtn {
-    position: absolute;
-    left: 47%;
-    bottom: 2%;
-    transform: translateX(-50%);
-    padding: .31rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: none;
-    border-radius: 5px;
-    color: black;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    overflow: auto;
-    white-space: nowrap;
-    animation: bounce 1s infinite;
-  }
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    40% {
-      transform: translateX(-50%) translateY(-5px);
-    }
-    60% {
-      transform: translateX(-50%) translateY(-3px);
-    }
-  }
-  
-  .nextProjectBtn:hover {
-    background-color: #686868; 
-    color: black; 
-  }
-  
+}
+
+.nextProjectBtn:hover {
+  background-color: #686868;
+  color: black;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 20rem;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: rgba(101, 98, 86, 0.4);
+  width: 100%;
+  max-width: 95%;
+  border-radius: 3rem;
+  margin: auto;
+  padding: 0 2%;
+  margin-top: 3.5rem;
+}
+
+.card-imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 60%;
+  gap: 1rem;
+}
+
+.card-info {
+  width: 35%;
+  max-width: 50%;
+  overflow-y: auto;
+  padding-left: 2rem;
+}
+
+
