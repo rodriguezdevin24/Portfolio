@@ -1,7 +1,6 @@
 // LandingHome.jsx
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { useGLTF } from "@react-three/drei";
 import { OrbitControls } from "@react-three/drei";
@@ -11,8 +10,8 @@ import computer from "./computer_monitor.glb";
 import "./home.css";
 
 const Section = styled.div`
-  height: 90vh;
-  max-height: 90vh;
+  height: 100vh;
+  max-height: 100vh;
   overflow: auto;
   display: flex;
   flex-direction: row;
@@ -148,9 +147,6 @@ const LandingHome = () => {
           From military medic to full-stack developer, I bring a unique
           perspective and a passion for learning to my work.
         </motion.p>
-        <Link to="journeyHome" smooth={true} duration={500}>
-          <button className="scrollDownJourney">V</button>
-        </Link>
       </TextContainer>
       <CanvasContainer>
         <Canvas style={{ width: '100%', height: '100%' }}>

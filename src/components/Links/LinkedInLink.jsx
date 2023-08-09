@@ -3,7 +3,7 @@ import './linkButtons.css';
 
 const LinkedInLink = () => {
   return (
-    <a href="https://docs.google.com/document/d/1_vgrFu1bYAECRvjAJGWRy0B_ouUyL0NKoDGcnitL-v8/edit?usp=sharing" 
+    <a href="https://www.linkedin.com/in/devin-rodriguez-1ba979276" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="fixed-button3">

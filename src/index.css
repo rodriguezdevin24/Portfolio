@@ -11,10 +11,11 @@ code {
 }
 
 .app-container {
-  background-color: #022945;
+  background-color: #1c0c6d;
   min-height: 100vh; 
   color: white;
   position: relative; 
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {

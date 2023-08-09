@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #180a5e;
 }
 
 .App-logo {
@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #180a5e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   }
 }
 .page-container {
-  margin-top: 0.625rem; 
+  
   min-height: 100vh;
   
 }
@@ -46,7 +46,7 @@
   text-align: center;
   color: white;
   font-size: 3.2rem;
-  color: #022945;
+  color: #180a5e;
 
 }
 

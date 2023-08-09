@@ -2,10 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
-import { Link } from "react-scroll";
+
 
 const Section = styled.section`
-  background-color: #022945;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -71,9 +70,6 @@ const ProjectHome = ({ id }) => {
         <ProjectCard className="project2" />
       </CardContainer>
       <ProjectsButton onClick={handleProjectClick}>View More Projects</ProjectsButton>
-      <Link to="footerAnimation" smooth={true} duration={500}>
-        <button className="scrollDown">V</button>
-      </Link>
     </Section>
   );
 };

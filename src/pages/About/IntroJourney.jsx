@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+
 
 import "./about.css";
 
@@ -7,7 +7,7 @@ const IntroJourney = () => {
   return (
     <div className="aboutPage">
       <div className="intro-journey">
-        <h2 className="aboutTitle">Introduction and Journey into Tech</h2>
+        <h2 className="aboutTitle">Journey into Tech</h2>
         <p>
           Hello! I'm a full-stack developer based in New York City with a
           background in healthcare as a medic in the Army. I'm bilingual,
@@ -19,11 +19,6 @@ const IntroJourney = () => {
           pursue a career in tech.
         </p>
       </div>
-      <Link to="education" smooth={true} duration={500}>
-        <button className ="scrollDownTop">
-          Scroll to next section
-        </button>
-      </Link>
     </div>
   );
 };

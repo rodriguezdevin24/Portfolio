@@ -1,40 +1,25 @@
-/* Footer.css */
+/* footer.css */
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #022741;
-    color: #fff;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%; 
-    position: absolute;
-  }
-  
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.7rem;
-  }
-  
-  .footer a:hover {
-    color: #f8f8f8;
-  }
-  .footer-black {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: linear-gradient(to bottom, #000000, #0e0e3a, #01020a);
-    color: white;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  display: flex;
+  justify-content: center; /* Center the links */
+  align-items: center;
+  color: #fff;
+  padding: 1rem 0;
+  position: absolute;
+  gap: 8rem;
+  bottom: 0;
+  width: 100%; /* Take up 80% of the width */
+  overflow: hidden;
 }
-.footer-black a {
-    color: #fff !important;
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  gap: 2rem;
+  font-size: 1.7rem;
+  margin: 0 15px; /* Add some space between the links */
 }
-.footer-black a:hover {
-    color: #f8f8f8 !important;
+
+.footer a:hover {
+  color: #f8f8f8;
 }
