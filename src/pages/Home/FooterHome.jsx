@@ -43,9 +43,10 @@ const FooterAnimation = () => {
   Click and drag above to interact
 </div>
 <motion.div
-      initial={{ scale: 0 }} // Start from no scale (invisible)
-      animate={{ scale: 1 }} // Animate to original size
-      transition={{ duration: 10 }} // Duration of 1 second
+      initial={{ scale: 0 }} 
+      animate={{  scale: 1 }} // Animate to original size
+      transition={{ duration: 2 }} // Duration of 1 second
+      
     >
      
         <Canvas style={{ position: "absolute" }}>
