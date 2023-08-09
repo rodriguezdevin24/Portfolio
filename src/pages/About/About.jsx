@@ -7,7 +7,6 @@ import Goals from './Goals';
 import HireMe from './HireMe';
 import { Element, scroller } from "react-scroll";
 import SkillsHome from './SkillsAbout';
-import Footer from '../../components/Footer/Footer';
 
 import './about.css';
 import '../../App.css';
@@ -69,7 +68,6 @@ const About = () => {
       </Element>
       <Element name="hireMe">
         <HireMe />
-        <Footer />
       </Element>
       {!isAtBottom && ( 
       <div
