@@ -6,9 +6,9 @@ import "./about.css";
 const IntroJourney = () => {
   return (
     <div className="aboutPage">
-      <div className="intro-journey">
+      <div className="introJourney">
         <h2 className="aboutTitle">Journey into Tech</h2>
-        <p>
+        <p className="journeyText">
           Hello! I'm a full-stack developer based in New York City with a
           background in healthcare as a medic in the Army. I'm bilingual,
           speaking both English and Spanish, and I'm currently serving in the
