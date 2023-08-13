@@ -9,13 +9,26 @@
     position: relative;
     flex-direction: column;
     justify-content: space-between; 
-    align-items: flex-start; 
+    align-items: center;
     color: white;
     padding: 50px; 
     text-align: left;
     @media (min-width: 769px) {
         height: 100vh; 
       }
+}
+.aboutPageRight {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between; 
+  align-items: center;
+  color: white;
+  padding: 50px; 
+  text-align: left;
+  @media (min-width: 769px) {
+      height: 100vh; 
+    }
 }
 
 .aboutTitle {
@@ -26,7 +39,7 @@
 }
 
 p {
-    font-size: 1.5rem; 
+    font-size: 1.7rem; 
     line-height: 1.9;
     z-index: 1;
 }
@@ -60,3 +73,20 @@ p {
     background-color: #f8f8f8; /* Lighter color on hover */
   }
   
+  .journeyText {
+    width: 60%;
+
+  }
+  .education {
+    width: 60%;
+  }
+  .goalsText {
+    width: 60%;
+  }
+  .hireMe {
+    width: 65%;
+    height: 100%;
+  }
+  .animation {
+    width: 35%;
+  }

@@ -5,10 +5,10 @@ import "./about.css";
 
 const HireMe = () => {
   return (
-    <div className="aboutPage">
+    <div className="aboutPageRight">
       <div className="hireMe">
         <h2 className="aboutTitle">Why Hire Me</h2>
-        <p>
+        <p className="hiremeText">
           I believe my unique background, combined with my technical skills and
           leadership qualities, make me a valuable addition to any team. I'm a
           big believer in fate and determinism, which has helped me develop a
