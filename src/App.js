@@ -1,7 +1,7 @@
 // App.jsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import MainNavbar from "./components/MainNavbar/MainNavbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
@@ -11,6 +11,9 @@ import GithubLink from "./components/Links/GithubLink";
 import LinkedInLink from "./components/Links/LinkedInLink";
 import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
 import Footer from "./components/Footer/Footer";
+import 'normalize.css';
+
+
 // import { Scroll } from "@react-three/drei";
 
 
@@ -20,7 +23,7 @@ const App = () => {
   return (
     <Router>
       <>
-        <MainNavbar />
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
