@@ -11,9 +11,9 @@ const ProjectDisplay = ({ project, onImageClick }) => {
             src={img} 
             alt={`Project screenshot ${idx + 1}`} 
             className="carousel-image" 
-            onClick={(e) => {
+            onClick={() => {
               console.log("Image clicked!");
-              onImageClick(e, img);
+              onImageClick(project.images);
           }}
       
           />

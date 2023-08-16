@@ -4,7 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
@@ -45,7 +45,7 @@
 .page-title {
   text-align: center;
   color: white;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   color: #180a5e;
 
 }

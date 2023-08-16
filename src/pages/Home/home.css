@@ -8,7 +8,6 @@
     background-position: center center;
     color:white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    font-family: roboto;
     text-align: justify;
     cursor: pointer;
     margin: 1.88rem;
@@ -57,6 +56,8 @@
   }
   .project1 {
     background-image: url('../Projects/wire-frames/IDLock1.png');
+    backface-visibility: hidden;
+-webkit-backface-visibility: hidden; 
   }
   .project2 {
     background-image: url('../Projects/wire-frames/Egoquest1.png');
@@ -146,21 +147,22 @@
 }
 
 .landing-title {
-  font-size: 3.5rem !important;
+  font-size: 4rem;
   margin-bottom: 2rem;
   padding: .5rem;
   margin-left: 3.9rem;
 }
 
 .landing-im, .landing-hi {
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
   margin-left: 2rem;
 }
 
 .landing-text{
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: left;
   margin-left: 4.5rem;
+  width: 80%;
 }
 
 /* Journeyhome.css */
@@ -214,9 +216,9 @@
   border: 2px solid #4CAF50;
 }
 .starsText {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   padding-bottom: 3rem;
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
 
   
@@ -233,7 +235,7 @@
 .interactive-indicator {
   position: absolute;
   top: 6rem;
-  left: 16rem;
+  left: 10rem;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -254,4 +256,10 @@
   60% {
     transform: translateX(-50%) translateY(-3px);
   }
+}
+
+.starsUpText {
+  font-size: 2rem;
+  z-index: 1;
+ 
 }

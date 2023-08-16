@@ -1,22 +1,21 @@
 body {
   margin: 0;
-  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-family:  "Helvetica", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-font-size: 16px;
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .app-container {
   background-color: #180a5e;
-  min-height: 100vh; 
+  min-height: 100vh;
   color: white;
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
 
@@ -24,12 +23,18 @@ code {
   display: none;
 }
 
-html, body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', 'Helvetica', sans-serif !important;
-  font-size: 16px;
+body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif !important;
+}
 }

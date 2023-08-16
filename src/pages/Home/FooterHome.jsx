@@ -80,7 +80,7 @@ const FooterAnimation = () => {
             animate={controls}
             initial="hidden"
             variants={{
-              visible: { y: "0%", opacity: 1, transition: { delay: 1.5 }, paddingTop: "10rem" },
+              visible: { y: "0%", opacity: 1, transition: { delay: 1.5 }, paddingTop: "7rem" },
               hidden: { y: "100%", opacity: 0 },
             }}
           >

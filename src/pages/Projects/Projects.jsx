@@ -3,19 +3,18 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import projectsData from './projectData';
 import ProjectDisplay from './ProjectDisplay';
-import ImageModal from './ImageModal'; // Assuming you've separated the ImageModal into its own file
+import ImageModal from './ImageModal'; 
 
 const Projects = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openModal = (e, img) => {
+  const openModal = (projectImages) => {
     console.log("Opening modal...");
-    e.stopPropagation(); 
-    setSelectedImage(img);
+    setSelectedImage(projectImages);
     setModalOpen(true);
   };
-
+  
   const closeModal = () => {
     setModalOpen(false);
     setSelectedImage(null);
@@ -35,7 +34,7 @@ const Projects = () => {
     ))}
 </Carousel>
 
-      {isModalOpen && <ImageModal image={selectedImage} onClose={closeModal} />}
+{isModalOpen && <ImageModal images={selectedImage} onClose={closeModal} />}
     </>
   );
 };

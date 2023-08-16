@@ -5,7 +5,7 @@
 }
 
 .testing .navbar-brand {
-  font-size: 3.125rem; /* 50px */
+  font-size: 2.9rem; /* 50px */
   font-weight: bold; 
   color:#ffffff !important;
 }
@@ -13,7 +13,7 @@
 .nav-links .nav-link {
   color: white !important;
   margin-right: 1rem; 
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .nav-links .nav-link:hover {

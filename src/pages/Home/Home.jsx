@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import FooterAnimation from './FooterHome';
 import { Element, scroller } from "react-scroll";
 
+
 const Container = styled.div``;
 
 const Home = () => {
