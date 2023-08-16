@@ -3,10 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Portrait from "./Portrait.png";
-import { useGLTF } from "@react-three/drei";
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import Logo from "./Logo3D.glb";
+// import { useGLTF } from "@react-three/drei";
+// import { OrbitControls } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import Logo from "./Logo3D.glb";
 
 import "./home.css";
 
@@ -75,10 +75,10 @@ const h1SlideFromRightVariants = {
 };
 
 const LandingHome = () => {
-  const Model = () => {
-    const gltf = useGLTF(Logo, true);
-    return <primitive object={gltf.scene} dispose={null} scale />;
-  };
+  // const Model = () => {
+  //   const gltf = useGLTF(Logo, true);
+  //   return <primitive object={gltf.scene} dispose={null} scale />;
+  // };
 
   return (
     <Section>
@@ -146,13 +146,13 @@ const LandingHome = () => {
           <PortraitImage src={Portrait} alt="Your Name" />
         </PortraitContainer>
       </TextContainer>
-      <CanvasContainer>
+      {/* <CanvasContainer>
         <Canvas camera={{ position: [-10, 20, -25]  }}>
           <ambientLight intensity={0.5} />
           <Model  />
           <OrbitControls enablePan={true} panSpeed={0.5} />
         </Canvas>
-      </CanvasContainer>
+      </CanvasContainer> */}
     </Section>
   );
 };
@@ -187,11 +187,4 @@ const PortraitImage = styled.img`
   height: 100%;
   object-fit: cover;
   margin-top: 20px;
-`;
-const CanvasContainer = styled.div`
-width: 40%; // Set width to 20% as per requirement
-height: 50vh; // Take full height
-position: absolute; // Position it absolutely
-top: 0; // Stick it to the bottom
-right: 0; // Stick it to the right
 `;

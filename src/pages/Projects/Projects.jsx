@@ -1,42 +1,50 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import projectsData from './projectData';
 import ProjectDisplay from './ProjectDisplay';
-import ImageModal from './ImageModal'; 
+import './projects.css';
 
 const Projects = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
 
-  const openModal = (projectImages) => {
+  const openModal = (index) => {
     console.log("Opening modal...");
-    setSelectedImage(projectImages);
+    setSelectedProjectIndex(index);
     setModalOpen(true);
   };
-  
+
   const closeModal = () => {
     setModalOpen(false);
-    setSelectedImage(null);
   };
 
   return (
     <>
-      <Carousel showThumbs={false}
-      infiniteLoop={true} 
-      autoPlay={true} 
-      interval={15000
-      }>
-    {projectsData.map((project, index) => (
+      {projectsData.map((project, index) => (
         <div key={index}>
-            <ProjectDisplay project={project} onImageClick={openModal} />
+          <ProjectDisplay project={project} onImageClick={() => openModal(index)} />
         </div>
-    ))}
-</Carousel>
+      ))}
 
-{isModalOpen && <ImageModal images={selectedImage} onClose={closeModal} />}
+{isModalOpen && (
+  <div className="modal-background" onClick={closeModal}>
+    <div className="modal1">
+      <button className="close-button" onClick={closeModal}>
+        Close
+      </button>
+      <div className="image-grid">
+        <div className="carousel-item1">
+          {projectsData[selectedProjectIndex].images.map((image, idx) => (
+            <img src={image} alt={`Project screenshot ${idx + 1}`} key={idx} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 };
+
 
 export default Projects;

@@ -19,9 +19,6 @@ code {
   overflow: hidden;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
 html,
 body {
