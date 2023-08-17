@@ -28,12 +28,12 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
 `;
 
 const JourneyText = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 `;
 

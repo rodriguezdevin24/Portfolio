@@ -19,12 +19,12 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: center;
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   max-width: 50rem;
   margin-top: 1rem;
@@ -47,7 +47,7 @@ const ProjectsButton = styled.button`
   border-radius: 5px;
   background-color: white;
   color: blue;
-  cursor: pointer;
+ 
   margin-top: 2rem;
   margin-bottom: 6.25rem;
 `;

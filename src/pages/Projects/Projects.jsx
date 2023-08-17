@@ -1,41 +1,60 @@
-import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import projectsData from './projectData';
-import ProjectDisplay from './ProjectDisplay';
-import ImageModal from './ImageModal'; // Assuming you've separated the ImageModal into its own file
+import React, { useState } from "react";
+import projectsData from "./projectData";
+import ProjectDisplay from "./ProjectDisplay";
+import "./projects.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
 const Projects = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
 
-  const openModal = (e, img) => {
-    console.log("Opening modal...");
-    e.stopPropagation(); 
-    setSelectedImage(img);
+  const openModal = (index, e) => {
+    e.stopPropagation();
+    setSelectedProjectIndex(index);
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    setSelectedImage(null);
+  };
+
+  const handleCarouselClick = (e) => {
+    e.stopPropagation();
   };
 
   return (
     <>
-      <Carousel showThumbs={false}
-      infiniteLoop={true} 
-      autoPlay={true} 
-      interval={15000
-      }>
-    {projectsData.map((project, index) => (
+      {projectsData.map((project, index) => (
         <div key={index}>
-            <ProjectDisplay project={project} onImageClick={openModal} />
+          <ProjectDisplay
+            project={project}
+            onImageClick={(e) => openModal(index, e)}
+          />
         </div>
-    ))}
-</Carousel>
+      ))}
 
-      {isModalOpen && <ImageModal image={selectedImage} onClose={closeModal} />}
+      {isModalOpen && (
+        <div className="modal-background" onClick={closeModal}>
+          <div className="modal1" onClick={handleCarouselClick}>
+            <button className="close-button" onClick={closeModal}>
+              X
+            </button>
+            <Carousel
+              infiniteLoop={true}
+              autoPlay={true}
+              interval={15000}
+              className="carousel-container"
+            >
+              {projectsData[selectedProjectIndex].images.map((image, idx) => (
+                <div key={idx}>
+                  <img src={image} alt={`Project screenshot ${idx + 1}`} />
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      )}
     </>
   );
 };

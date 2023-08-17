@@ -49,11 +49,11 @@ const Title = styled(motion.h1)`
 `;
 
 const SkillsGrid = styled.div`
-  margin-top: 9.375rem;
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  margin-bottom: 9.375rem;
+  gap: 2rem;
+  margin-bottom: 10rem;
   @media (max-width: 768px) {
     grid-template-columns: repeat(
       2,
@@ -92,7 +92,7 @@ const SkillsAbout = ({ id }) => {
     { name: "MongoDB", icon: mongodbIcon },
     { name: "PostgreSQL", icon: postgresqlIcon },
     { name: "SQL", icon: sqlIcon },
-    { name: "OpenAI API", icon: openaiIcon },
+    { name: "Chatbox", icon: openaiIcon },
     { name: "GitHub", icon: githubIcon },
     { name: "Python", icon: pythonIcon },
     { name: "Django REST", icon: djangoIcon },

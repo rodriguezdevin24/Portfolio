@@ -5,19 +5,16 @@ const ProjectDisplay = ({ project, onImageClick }) => {
   return (
     <div className="card1">
       <div className="card-imgs">
-        {project.images.slice(0, 4).map((img, idx) => (
+        <div className="image-container" onClick={onImageClick}>
           <img 
-            key={idx} 
-            src={img} 
-            alt={`Project screenshot ${idx + 1}`} 
-            className="carousel-image" 
-            onClick={(e) => {
-              console.log("Image clicked!");
-              onImageClick(e, img);
-          }}
-      
+            src={project.staticImage} 
+            alt={`Static image1 for ${project.title}`} 
+            className="carousel-image"
           />
-        ))}
+          <div className="overlay">
+            <div className="text">View More Images</div>
+          </div>
+        </div>
       </div>
       <div className="card-info">
         <h4>{project.title}</h4>
