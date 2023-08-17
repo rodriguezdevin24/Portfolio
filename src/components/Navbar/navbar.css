@@ -27,3 +27,8 @@
   color: white;
 }
 
+@media (max-width: 767px) {
+  .testing {
+    margin-top: 56px; /* Adjust this value as needed */
+  }
+}

@@ -83,7 +83,7 @@ h1,
   justify-content: center;
   align-items: center;
   color: white;
-  overflow: auto;
+  overflow: hidden;
 }
 .modal-background {
   position: fixed;
@@ -104,8 +104,9 @@ h1,
   color: white;
   border: none;
   cursor: pointer;
+  z-index: 999;
 }
-/* ... other styles ... */
+
 
 .image-container {
   position: relative;
@@ -122,19 +123,19 @@ h1,
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.2; /* Partially visible by default */
+  opacity: 0.2; 
   transition: opacity 0.5s;
 }
 
 .image-container:hover .overlay {
-  opacity: 1; /* Fully visible on hover */
+  opacity: 1; 
 }
 
 .text {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  transform: rotate(-20deg);
+  transform: rotate(-5deg);
 }
 .image-grid {
   display: grid;
@@ -148,3 +149,91 @@ h1,
   border-radius: 10px;
   object-fit: cover;
 }
+
+.rotator {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  transform-style: preserve-3d;
+  animation: rotation 30s linear infinite;
+}
+
+.items1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px);
+}
+
+
+ 
+
+.items1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 2s;
+}
+
+/* @keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+} */
+
+/* Position each image based on its index */
+/* .items1 .image-0 {
+  transform: rotateY(0deg) translateZ(300px);
+  transform-origin: center;
+}
+.items1 .image-1 {
+  transform: rotateY(72deg) translateZ(300px);
+  transform-origin: center;
+}
+.items1 .image-2 {
+  transform: rotateY(144deg) translateZ(300px);
+  transform-origin: center;
+}
+.items1 .image-3 {
+  transform: rotateY(216deg) translateZ(300px);
+  transform-origin: center;
+}
+.items1 .image-4 {
+  transform: rotateY(288deg) translateZ(300px);
+  transform-origin: center;
+} */
+
+/* .carousel-container {
+  width: 80%;
+  margin: auto;
+} */
+
+.carousel .slide img {
+  max-height: 33rem;
+  max-width: 90% ;
+  margin: auto;
+  padding-top: 4rem;
+}
+
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .sliderWrapper {
+  width: 80%;
+}
+/* .carousel .carousel-status {
+ top: 2rem;
+} */
