@@ -34,6 +34,7 @@ h1,
 
 .carousel-image {
   height: 13rem;
+  width: 100%;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -42,7 +43,7 @@ h1,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 70vh;
   background-color: rgba(101, 98, 86, 0.4);
   width: 60%;
   max-width: 70%;
@@ -220,8 +221,9 @@ h1,
 
 .carousel .slide img {
   max-height: 33rem;
+  max-width: 90%;
   margin: auto;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 .carousel .thumbs {
@@ -232,6 +234,44 @@ h1,
 .carousel .sliderWrapper {
   width: 80%;
 }
-/* .carousel .carousel-status {
- top: 2rem;
-} */
+.carousel .carousel-status {
+ top: 10% !important;
+ right: 15%;
+}
+/* Add a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .card1 {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+    overflow: auto;
+  }
+
+  .card-info {
+    width: 100%;
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .carousel .slide img {
+    margin-top: 5rem;
+    max-height: 20rem;
+    max-width: 100%;
+  }
+
+  .carousel .sliderWrapper {
+    width: 100%;
+  }
+  .project-button {
+    font-size: 0.7rem;
+    padding: 0.2rem .7rem;
+  }
+   .carousel-image {
+    max-height: 20rem;
+    max-width: 100%;
+}
+}
+
+/* Remove unused or unnecessary CSS rules */
+/* .rotator, .items1, .items1 img, @keyframes rotation, .items1 .image-0, .items1 .image-1, .items1 .image-2, .items1 .image-3, .items1 .image-4 */

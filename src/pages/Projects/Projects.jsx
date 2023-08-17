@@ -4,6 +4,7 @@ import ProjectDisplay from "./ProjectDisplay";
 import "./projects.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -25,36 +26,58 @@ const Projects = () => {
 
   return (
     <>
-      {projectsData.map((project, index) => (
-        <div key={index}>
-          <ProjectDisplay
-            project={project}
-            onImageClick={(e) => openModal(index, e)}
-          />
-        </div>
-      ))}
-
-      {isModalOpen && (
-        <div className="modal-background" onClick={closeModal}>
-          <div className="modal1" onClick={handleCarouselClick}>
-            <button className="close-button" onClick={closeModal}>
-              X
-            </button>
-            <Carousel
-              infiniteLoop={true}
-              autoPlay={true}
-              interval={15000}
-              className="carousel-container"
-            >
-              {projectsData[selectedProjectIndex].images.map((image, idx) => (
-                <div key={idx}>
-                  <img src={image} alt={`Project screenshot ${idx + 1}`} />
-                </div>
-              ))}
-            </Carousel>
+      <Carousel
+        infiniteLoop={true}
+        autoPlay={true}
+        interval={15000}
+        className="carousel-container"
+      >
+        {projectsData.map((project, index) => (
+          <div key={index}>
+            <ProjectDisplay
+              project={project}
+              onImageClick={(e) => openModal(index, e)}
+            />
           </div>
-        </div>
-      )}
+        ))}
+      </Carousel>
+
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="modal-background"
+            onClick={closeModal}
+          >
+            <motion.div
+              key={selectedProjectIndex}
+              className="modal1"
+              onClick={handleCarouselClick}
+              initial={{ y: "-100vh" }}
+              animate={{ y: "0" }}
+              exit={{ y: "-100vh" }}
+            >
+              <button className="close-button" onClick={closeModal}>
+                X
+              </button>
+              <Carousel
+                infiniteLoop={true}
+                autoPlay={true}
+                interval={15000}
+                className="carousel-container"
+              >
+                {projectsData[selectedProjectIndex].images.map((image, idx) => (
+                  <div key={idx}>
+                    <img src={image} alt={`Project screenshot ${idx + 1}`} />
+                  </div>
+                ))}
+              </Carousel>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
