@@ -148,12 +148,18 @@
 
 .landing-title {
   font-size: 4rem;
-  margin-bottom: 2rem;
-  padding: .5rem;
-  margin-left: 3.9rem;
+  margin-bottom: 2.5rem;
+  font-weight: 400; 
+  width: 100%;
+  display: inline-block;
+
 }
 
-.landing-im, .landing-hi {
+.landing-im {
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+.landing-hi {
   font-size: 1.5rem;
   margin-left: 2rem;
 }
@@ -161,7 +167,6 @@
 .landing-text{
   font-size: 1.7rem;
   text-align: left;
-  margin-left: 4.5rem;
   width: 80%;
 }
 
@@ -170,8 +175,9 @@
 
 .landing-subtitle {
   font-size: 2.5em;
-  margin-bottom: 2rem;
-  margin-left: 4.5rem;
+  margin-bottom: 2.8rem;
+  display: inline-block;
+  
 }
 
 .scrollDown {
@@ -300,4 +306,35 @@
 
 .credit a:hover {
   text-decoration: underline;
+}
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid rgb(255, 255, 255);
+  animation: typing 1.5s steps(18)forwards , blinking 1s infinite;
+  animation-delay: 4.5s;
+  width: fit-content ;
+  box-sizing: content-box;
+  visibility: hidden;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    
+  }
+  100% {
+    width: 55%;
+    visibility: visible;
+  }
+}
+
+@keyframes blinking {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
 }
