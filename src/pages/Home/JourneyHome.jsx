@@ -1,12 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import { useNavigate } from "react-router-dom";
 
 //import { motion } from "framer-motion";
 
-import './home.css'
-
+import "./home.css";
 
 const Section = styled.section`
   display: flex;
@@ -16,7 +15,8 @@ const Section = styled.section`
   align-items: flex-start;
   text-align: left;
   padding-left: 20%;
-  background-image: url("https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url(${require("./NYC.jpg")});
+
   background-size: cover;
   position: relative;
   color: white;
@@ -30,11 +30,13 @@ const Section = styled.section`
 const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 3rem;
+  color: black;
 `;
 
 const JourneyText = styled.p`
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  color: black;
 `;
 
 const MoreButton = styled.button`
@@ -48,23 +50,70 @@ const MoreButton = styled.button`
   margin-top: 2rem;
   margin-bottom: 21.88rem;
 `;
+const ShapeDivider = styled.button`
+  .custom-shape-divider-bottom-1692312022 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
 
+  .custom-shape-divider-bottom-1692312022 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 54px;
+  }
+
+  .custom-shape-divider-bottom-1692312022 .shape-fill {
+    fill: #182459;
+  }
+`;
 
 const JourneyHome = ({ id }) => {
   const navigate = useNavigate();
 
   const handleMoreButtonClick = () => {
-    navigate('/about');
+    navigate("/about");
   };
 
-
   return (
-    <Section id={id}> 
+    <Section id={id}>
       <Title>My Journey</Title>
       <JourneyText>
-        Born and raised in New York, I discovered my passion for technology at a young age. After high school, I joined the military and became a medic. On a whim, I decided to try out software development and instantly fell in love. It's a passion I plan to pursue, whether professionally or as a hobby.
+        Born and raised in New York, I discovered my passion for technology at a
+        young age. After high school, I joined the military and became a medic.
+        On a whim, I decided to try out software development and instantly fell
+        in love. It's a passion I plan to pursue, whether professionally or as a
+        hobby.
       </JourneyText>
-      <MoreButton onClick={handleMoreButtonClick} >Learn More About Me</MoreButton>
+      <MoreButton onClick={handleMoreButtonClick}>
+        Learn More About Me
+      </MoreButton>
+      <div class="credit">
+        Designed by{" "}
+        <a href="https://www.freepik.com/free-vector/new-york-city-cityscape-scene_29108017.htm#query=new%20york%20cartoon&position=27&from_view=keyword&track=ais">
+          Freepik
+        </a>
+      </div>
+      <ShapeDivider>
+        <div class="custom-shape-divider-bottom-1692312022">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </ShapeDivider>
     </Section>
   );
 };
