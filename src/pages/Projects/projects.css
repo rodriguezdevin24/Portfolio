@@ -52,7 +52,7 @@ h1,
   padding: 0 2%;
   margin-top: 3rem;
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  overflow: auto;
 }
 
 .card-info {
@@ -62,6 +62,7 @@ h1,
   padding-left: 4rem;
   text-align: left;
   font-size: 1.2rem;
+  overflow:auto;
 }
 
 .card-info h4 {
@@ -137,11 +138,13 @@ h1,
   font-weight: bold;
   transform: rotate(-5deg);
 }
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+.card-imgs .static-image {
+  height: 13rem;
+  width: 100% !important;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 
 .carousel-item1 img {
   width: 100%;
@@ -149,75 +152,6 @@ h1,
   border-radius: 10px;
   object-fit: cover;
 }
-
-.rotator {
-  position: relative;
-  width: 60%;
-  height: 60%;
-  transform-style: preserve-3d;
-  animation: rotation 30s linear infinite;
-}
-
-.items1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px);
-}
-
-
- 
-
-.items1 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: 2s;
-}
-
-/* @keyframes rotation {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-} */
-
-/* Position each image based on its index */
-/* .items1 .image-0 {
-  transform: rotateY(0deg) translateZ(300px);
-  transform-origin: center;
-}
-.items1 .image-1 {
-  transform: rotateY(72deg) translateZ(300px);
-  transform-origin: center;
-}
-.items1 .image-2 {
-  transform: rotateY(144deg) translateZ(300px);
-  transform-origin: center;
-}
-.items1 .image-3 {
-  transform: rotateY(216deg) translateZ(300px);
-  transform-origin: center;
-}
-.items1 .image-4 {
-  transform: rotateY(288deg) translateZ(300px);
-  transform-origin: center;
-} */
-
-/* .carousel-container {
-  width: 80%;
-  margin: auto;
-} */
 
 .carousel .slide img {
   max-height: 33rem;
@@ -274,4 +208,4 @@ h1,
 }
 
 /* Remove unused or unnecessary CSS rules */
-/* .rotator, .items1, .items1 img, @keyframes rotation, .items1 .image-0, .items1 .image-1, .items1 .image-2, .items1 .image-3, .items1 .image-4 */
+/*  .items1 .image-0, .items1 .image-1, .items1 .image-2, .items1 .image-3, .items1 .image-4 */

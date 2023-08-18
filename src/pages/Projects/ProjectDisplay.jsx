@@ -8,8 +8,8 @@ const ProjectDisplay = ({ project, onImageClick }) => {
         <div className="image-container" onClick={onImageClick}>
           <img 
             src={project.staticImage} 
-            alt={`Static image1 for ${project.title}`} 
-            className="carousel-image"
+            alt={`Static imag for ${project.title}`} 
+            className="static-image"
           />
           <div className="overlay">
             <div className="text">View More Images</div>

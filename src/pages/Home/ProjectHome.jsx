@@ -11,6 +11,7 @@ const Section = styled.section`
   align-items: center;
   color: white;
   font-size: 1.5rem;
+  background-color: #182459;
   padding: 4rem;
   position: relative;
   @media (min-width: 769px) {
@@ -63,15 +64,46 @@ const ProjectHome = ({ id }) => {
     <Section id={id}>
       <Title>Current Projects</Title>
       <Subtitle>
-        A preview of my current projects. Click below to find out more.
+        A tease of my current projects. Click below to find out more.
       </Subtitle>
       <CardContainer>
         <ProjectCard className="project1" />
         <ProjectCard className="project2" />
       </CardContainer>
       <ProjectsButton onClick={handleProjectClick}>View More Projects</ProjectsButton>
+      {/* <ShapeDivider>
+      <div class="custom-shape-divider-bottom-1692310483">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
+    </svg>
+</div>
+      </ShapeDivider> */}
     </Section>
   );
 };
 
 export default ProjectHome;
+
+// const ShapeDivider = styled.div `
+// .custom-shape-divider-bottom-1692310483 {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   overflow: hidden;
+//   line-height: 0;
+//   transform: rotate(180deg);
+// }
+
+// .custom-shape-divider-bottom-1692310483 svg {
+//   position: relative;
+//   display: block;
+//   width: calc(100% + 1.3px);
+//   height: 85px;
+// }
+
+// .custom-shape-divider-bottom-1692310483 .shape-fill {
+//   fill: #182459;
+// }
+
+// `

@@ -1,6 +1,7 @@
 //projectData.js
 
 //IDLOCK WIRE-FRAMES
+import idlock0 from "./wire-frames/IDLock0.png";
 import idlock1 from "./wire-frames/IDLock1.png";
 import idlock2 from "./wire-frames/IDLock2.png";
 import idlock3 from "./wire-frames/IDLock3.png";
@@ -33,7 +34,7 @@ const projectsData = [
       idlock3,
       idlock4,
     ],
-    staticImage: idlock1,
+    staticImage: idlock0,
     description:
       "This is a groundbreaking application that leverages technologies like React.js, SQL, Python, Django, PostgreSQL, blockchain, NFTs, and AI chatbox. What sets it apart is its innovative approach to digital identity management, blending blockchain, NFTs, and AI chatbox for a seamless experience. For a deeper dive into IdentityLock, I encourage you to explore our GitHub README.",
     githubLink: "https://github.com/AleksBulajic/NFT_ID_front-end",

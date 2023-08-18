@@ -10,8 +10,9 @@ import Portrait from "./Portrait.png";
 
 import "./home.css";
 
+
 const Section = styled.div`
-  height: 100vh;
+  height: 90vh;
   max-height: 100vh;
   overflow: auto;
   display: flex;
@@ -22,9 +23,7 @@ const Section = styled.div`
   color: white;
   position: relative;
   scroll-snap-align: center;
-  background-image: url
-    "https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-  background-size: cover;
+  background-color: #182459;
   position: relative;
 `;
 
@@ -146,13 +145,11 @@ const LandingHome = () => {
           <PortraitImage src={Portrait} alt="Your Name" />
         </PortraitContainer>
       </TextContainer>
-      {/* <CanvasContainer>
-        <Canvas camera={{ position: [-10, 20, -25]  }}>
-          <ambientLight intensity={0.5} />
-          <Model  />
-          <OrbitControls enablePan={true} panSpeed={0.5} />
-        </Canvas>
-      </CanvasContainer> */}
+      <ShapeDivider>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </ShapeDivider>
     </Section>
   );
 };
@@ -160,7 +157,7 @@ const LandingHome = () => {
 export default LandingHome;
 
 const TextContainer = styled.div`
-  width: 800%; // Take the full width of the parent
+  width: 100%; 
   display: flex;
   flex-direction: row; // Lay out children horizontally
   align-items: center; // Vertically center the items
@@ -179,7 +176,7 @@ const PortraitContainer = styled.div`
   margin: 20px 0; // Add some margin for spacing
   background-color: #dcd8af;
   margin-right: 9rem;
-  margin-top: 5rem;
+  
 `;
 
 const PortraitImage = styled.img`
@@ -187,4 +184,26 @@ const PortraitImage = styled.img`
   height: 100%;
   object-fit: cover;
   margin-top: 20px;
+`;
+
+
+const ShapeDivider = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 69px;
+  }
+
+  .shape-fill {
+    fill: #607D8F;
+  }
 `;

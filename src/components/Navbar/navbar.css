@@ -1,14 +1,13 @@
 .testing {
   color: white;
   border-radius: .5rem;
-  height:5rem;
-}
-
-.testing .navbar-brand {
+  height:7rem;
   font-size: 2.9rem; /* 50px */
   font-weight: bold; 
   color:#ffffff !important;
 }
+
+
 
 .nav-links .nav-link {
   color: white !important;
@@ -31,4 +30,11 @@
   .testing {
     margin-top: 56px; /* Adjust this value as needed */
   }
+}
+.logo-image {
+  width: 5rem;
+  height: 7rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  /* Add any other styles you want */
 }
