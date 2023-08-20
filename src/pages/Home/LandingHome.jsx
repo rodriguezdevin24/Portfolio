@@ -70,7 +70,7 @@ const LandingHome = () => {
     <Section>
       <TextContainer>
         <TextWrapper>
-          <div style={{ display: "flex", justifyContent: "left", alignItems: "left", paddingTop: "40px", paddingBottom: "1rem"}}
+          <div style={{ display: "flex", justifyContent: "left", alignItems: "left", paddingTop: "40px", paddingBottom: "1.5rem"}}
           >
             <motion.h1
               className="landing-hi"
@@ -123,9 +123,9 @@ const LandingHome = () => {
             className="landing-text"
             initial={{ x: "-170%" }}
             animate={{ x: "0%" }}
-            transition={{ duration: 1.3, ease: "easeInOut", delay: 7.2 }}
+            transition={{ duration: 1.3, ease: "easeInOut", delay: 6.3 }}
           >
-            From military medic to full-stack developer, I bring a unique
+            From Army medic to full-stack developer, I bring a unique
             perspective and a passion for learning to my work.
           </motion.p>
         </TextWrapper>
@@ -134,9 +134,9 @@ const LandingHome = () => {
         </PortraitContainer>
       </TextContainer>
       <ShapeDivider>
-        <div class="custom-shape-divider-bottom-1692326285">
+        <div className="custom-shape-divider-bottom-1692326285">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
           </svg>
         </div>
       </ShapeDivider>
@@ -174,6 +174,7 @@ const PortraitImage = styled.img`
   height: 100%;
   object-fit: cover;
   margin-top: 20px;
+  filter: drop-shadow(0 0 0.75rem #182459);
 `;
 
 const ShapeDivider = styled.div`
@@ -190,7 +191,7 @@ const ShapeDivider = styled.div`
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 52px;
+    height: 59px;
     transform: rotateY(180deg);
   }
 

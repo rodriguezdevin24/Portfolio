@@ -93,3 +93,7 @@ const About = () => {
 
 
 export default About;
+
+// i love fitness and show video of you winning iron soldier and other related 
+// i love dogs and show other pictures related to dogs 
+//add 4 rows that stagnate down and then alternate

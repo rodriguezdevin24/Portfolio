@@ -77,7 +77,7 @@ const ShapeDivider = styled.button`
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 54px;
+    height: 53px;
   }
 
   .custom-shape-divider-bottom-1692312022 .shape-fill {
@@ -113,8 +113,11 @@ const JourneyHome = ({ id }) => {
         in love. It's a passion I plan to pursue, whether professionally or as a
         hobby.
       </JourneyText>
-      <MoreButton onClick={handleMoreButtonClick}>
-        Learn More About Me
+      <MoreButton 
+      className="more-button" 
+      onClick={handleMoreButtonClick}
+      >
+        <span>More About My Story</span>
       </MoreButton>
       </CenteredContainer>
       <div class="credit">
@@ -124,7 +127,7 @@ const JourneyHome = ({ id }) => {
         </a>
       </div>
       <ShapeDivider>
-        <div class="custom-shape-divider-bottom-1692312022">
+        <div className="custom-shape-divider-bottom-1692312022">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +136,7 @@ const JourneyHome = ({ id }) => {
           >
             <path
               d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
-              class="shape-fill"
+              className="shape-fill"
             ></path>
           </svg>
         </div>
