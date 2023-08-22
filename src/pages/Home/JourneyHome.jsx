@@ -23,6 +23,7 @@ const Section = styled.section`
   padding: 4rem;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
+    background-size: cover;
   }
 `;
 
@@ -120,7 +121,7 @@ const JourneyHome = ({ id }) => {
         <span>More About My Story</span>
       </MoreButton>
       </CenteredContainer>
-      <div class="credit">
+      <div className="credit">
         Designed by{" "}
         <a href="https://www.freepik.com/free-vector/new-york-city-cityscape-scene_29108017.htm#query=new%20york%20cartoon&position=27&from_view=keyword&track=ais">
           Freepik

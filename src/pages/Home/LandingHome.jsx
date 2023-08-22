@@ -18,10 +18,14 @@ const Section = styled.div`
   scroll-snap-align: center;
   background-color: #182459;
   position: relative;
-  padding-left: 5rem;
+  
   @media (min-width: 769px) {
     height: 90vh; // Set the height to 100vh on larger screens
+    padding-left: 5rem;
   }
+  @media (max-width: 769px) {
+    padding-left: 1.5rem;
+    height: 100vh;
 `;
 
 const h1EnterFromBottomVariants = {
@@ -156,6 +160,9 @@ const TextContainer = styled.div`
 
 const TextWrapper = styled.div`
   width: 50%; // Take up half the width
+  @media (max-width: 769px) {
+    width: 100%;
+  }
 `;
 
 const PortraitContainer = styled.div`
