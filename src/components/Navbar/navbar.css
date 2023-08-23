@@ -34,7 +34,7 @@
 .logo-image {
   width: 5rem;
   height: 7rem;
-  margin-left: 3rem;
+  filter: drop-shadow(0 0 0.65rem #eaf09b);
   margin-top: 1rem;
   /* Add any other styles you want */
 }

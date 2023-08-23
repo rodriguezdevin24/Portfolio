@@ -7,7 +7,7 @@ const LinkedInLink = () => {
        target="_blank" 
        rel="noopener noreferrer" 
        className="fixed-button3">
-       <img src="/linkedin-icon.png" alt="LinkedIn" style={{width: '30px', height: '30px'}} />
+       <img src="/linkedin-icon.png" alt="LinkedIn" className="link-btns" style={{width: '30px', height: '30px'}} />
     
     </a>
   );

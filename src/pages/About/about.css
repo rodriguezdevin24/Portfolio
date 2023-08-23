@@ -93,3 +93,19 @@ p {
   .animation {
     width: 35%;
   }
+
+ .goals-section {
+  background-image: url("./wrnmmcbg.png");
+  background-size: cover;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  color: white;
+  padding: 50px; 
+  text-align: left;
+  @media (min-width: 769px) {
+      height: 100vh; 
+    }
+}

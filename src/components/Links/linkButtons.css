@@ -17,7 +17,7 @@
   .fixed-button:hover {
     background-color: #f8f8f8; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid #040404;
   }
   
 .fixed-button2 {
@@ -39,7 +39,7 @@
   .fixed-button2:hover {
     background-color: #f8f8f8; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid #000000;
   }
   
 .fixed-button3 {
@@ -61,7 +61,7 @@
   .fixed-button3:hover {
     background-color: #f8f8f8; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid #000000;
   }
   
 

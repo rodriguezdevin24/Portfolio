@@ -148,12 +148,18 @@
 
 .landing-title {
   font-size: 4rem;
-  margin-bottom: 2rem;
-  padding: .5rem;
-  margin-left: 3.9rem;
+  margin-bottom: 2.5rem;
+  font-weight: bold; 
+  width: 100%;
+  display: inline-block;
+
 }
 
-.landing-im, .landing-hi {
+.landing-im {
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+.landing-hi {
   font-size: 1.5rem;
   margin-left: 2rem;
 }
@@ -161,7 +167,6 @@
 .landing-text{
   font-size: 1.7rem;
   text-align: left;
-  margin-left: 4.5rem;
   width: 80%;
 }
 
@@ -170,8 +175,9 @@
 
 .landing-subtitle {
   font-size: 2.5em;
-  margin-bottom: 2rem;
-  margin-left: 4.5rem;
+  margin-bottom: 2.8rem;
+  display: inline-block;
+  
 }
 
 .scrollDown {
@@ -300,4 +306,110 @@
 
 .credit a:hover {
   text-decoration: underline;
+}
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid rgb(255, 255, 255);
+  animation: typing 1.1s steps(18)forwards , blinking 1s infinite;
+  animation-delay: 3.8s;
+  width: fit-content ;
+  box-sizing: content-box;
+  visibility: hidden;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    
+  }
+  100% {
+    width: 55%;
+    visibility: visible;
+  }
+}
+
+@keyframes blinking {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+.more-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 21.88rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.more-button::before,
+.more-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #192459;
+  transition: all 0.5s;
+}
+
+.more-button::before {
+  top: 0;
+  left: 0;
+}
+
+.more-button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.more-button:hover::before {
+  width: 100%;
+}
+
+.more-button:hover::after {
+  width: 100%;
+}
+
+.more-button span::before,
+.more-button span::after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 2px;
+  background-color: #192459;
+  transition: all 0.5s;
+}
+
+.more-button span::before {
+  top: 0;
+  left: 0;
+  transition-delay: 0.5s;
+}
+
+.more-button span::after {
+  bottom: 0;
+  right: 0;
+  transition-delay: 0.5s;
+}
+
+.more-button:hover span::before {
+  height: 100%;
+}
+
+.more-button:hover span::after {
+  height: 100%;
 }

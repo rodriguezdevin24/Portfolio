@@ -9,34 +9,43 @@ import "./home.css";
 
 const Section = styled.section`
   display: flex;
-  height: 100vh;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: flex-end;
   text-align: left;
   padding-left: 20%;
   background-image: url(${require("./NYC.jpg")});
-
   background-size: cover;
   position: relative;
+  padding-top: 3rem;
   color: white;
   font-size: 1.5rem;
   padding: 4rem;
   @media (min-width: 769px) {
     height: 100vh; // Set the height to 100vh on larger screens
+    background-size: cover;
   }
 `;
 
 const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 3rem;
-  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 3rem;
+  
 `;
 
 const JourneyText = styled.p`
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: black;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+  width: 70%;
+  align-items: left;
 `;
 
 const MoreButton = styled.button`
@@ -49,6 +58,10 @@ const MoreButton = styled.button`
   cursor: pointer;
   margin-top: 2rem;
   margin-bottom: 21.88rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-right: 3rem;
 `;
 const ShapeDivider = styled.button`
   .custom-shape-divider-bottom-1692312022 {
@@ -65,13 +78,23 @@ const ShapeDivider = styled.button`
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 54px;
+    height: 53px;
   }
 
   .custom-shape-divider-bottom-1692312022 .shape-fill {
     fill: #182459;
   }
 `;
+const CenteredContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+width: 85%;
+text-align: center;
+
+
+`;
+
 
 const JourneyHome = ({ id }) => {
   const navigate = useNavigate();
@@ -82,6 +105,7 @@ const JourneyHome = ({ id }) => {
 
   return (
     <Section id={id}>
+      <CenteredContainer>
       <Title>My Journey</Title>
       <JourneyText>
         Born and raised in New York, I discovered my passion for technology at a
@@ -90,17 +114,21 @@ const JourneyHome = ({ id }) => {
         in love. It's a passion I plan to pursue, whether professionally or as a
         hobby.
       </JourneyText>
-      <MoreButton onClick={handleMoreButtonClick}>
-        Learn More About Me
+      <MoreButton 
+      className="more-button" 
+      onClick={handleMoreButtonClick}
+      >
+        <span>More About My Story</span>
       </MoreButton>
-      <div class="credit">
+      </CenteredContainer>
+      <div className="credit">
         Designed by{" "}
         <a href="https://www.freepik.com/free-vector/new-york-city-cityscape-scene_29108017.htm#query=new%20york%20cartoon&position=27&from_view=keyword&track=ais">
           Freepik
         </a>
       </div>
       <ShapeDivider>
-        <div class="custom-shape-divider-bottom-1692312022">
+        <div className="custom-shape-divider-bottom-1692312022">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +137,7 @@ const JourneyHome = ({ id }) => {
           >
             <path
               d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
-              class="shape-fill"
+              className="shape-fill"
             ></path>
           </svg>
         </div>

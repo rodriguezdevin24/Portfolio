@@ -5,19 +5,16 @@ import IntroJourney from './IntroJourney';
 import Education from './Education';
 import Goals from './Goals';
 import HireMe from './HireMe';
-import { Element, scroller } from "react-scroll";
+import { Element } from "react-scroll";
 import SkillsHome from './SkillsAbout';
 
-import './about.css';
+// import './about.css';
 import '../../App.css';
 
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const sections = ["introJourney", "education", "skills", "goals", "hireMe"];
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -36,15 +33,7 @@ const About = () => {
   }, []);
     
 
-  const handleButtonClick = () => {
-    const nextSectionIndex = (currentSectionIndex + 1) % sections.length;
-    setCurrentSectionIndex(nextSectionIndex);
-
-    scroller.scrollTo(sections[nextSectionIndex], {
-      duration: 500,
-      smooth: true,
-    });
-  };
+  
 
   return (
     <div className="page-container">
@@ -78,13 +67,6 @@ const About = () => {
           transform: "translateX(-40%)",
         }}
       >
-        <button className="nextProjectBtn" onClick={handleButtonClick}>
-          <img
-            src="/down-icon.png"
-            alt="Down"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </button>
       </div>
       )}
     </div>
@@ -93,3 +75,7 @@ const About = () => {
 
 
 export default About;
+
+// i love fitness and show video of you winning iron soldier and other related 
+// i love dogs and show other pictures related to dogs 
+//add 4 rows that stagnate down and then alternate

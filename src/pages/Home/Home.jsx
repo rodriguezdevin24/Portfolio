@@ -1,32 +1,23 @@
-import React from 'react';
-import LandingHome from './LandingHome';
-import JourneyHome from './JourneyHome';
-import ProjectHome from './ProjectHome';
-import styled from 'styled-components';
-import FooterAnimation from './FooterHome';
-import { Element } from "react-scroll";
-
+import React, { useEffect } from "react";
+import LandingHome from "./LandingHome";
+import JourneyHome from "./JourneyHome";
+import ProjectHome from "./ProjectHome";
+import styled from "styled-components";
+import FooterAnimation from "./FooterHome";
 
 const Container = styled.div``;
-
 const Home = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
-      <Element name="landingHome">
-        <LandingHome />
-      </Element>
-      <Element name="journeyHome">
-        <JourneyHome />
-      </Element>
-      <Element name="projectHome">
-        <ProjectHome />
-      </Element>
-      <Element name="footerAnimation">
-        <FooterAnimation />
-      </Element>
+      <LandingHome />
+      <JourneyHome />
+      <ProjectHome />
+      <FooterAnimation />
     </Container>
-  )
-}
+  );
+};
 
 export default Home;
