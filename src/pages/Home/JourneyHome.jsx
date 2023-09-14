@@ -1,11 +1,63 @@
 import React from "react";
 import styled from "styled-components";
-
 import { useNavigate } from "react-router-dom";
 
-//import { motion } from "framer-motion";
-
 import "./home.css";
+
+
+const JourneyHome = ({ id }) => {
+  const navigate = useNavigate();
+
+  const handleMoreButtonClick = () => {
+    navigate("/about");
+  };
+
+  return (
+    <Section id={id}>
+      <CenteredContainer>
+      <Title>My Journey</Title>
+      <JourneyText>
+        Born and raised in New York, I discovered my passion for technology at a
+        young age. After high school, I joined the military and became a medic.
+        On a whim, I decided to try out software development and instantly fell
+        in love. It's a passion I plan to pursue, whether professionally or as a
+        hobby.
+      </JourneyText>
+      <MoreButton 
+      className="more-button" 
+      onClick={handleMoreButtonClick}
+      >
+        <span>More About My Story</span>
+      </MoreButton>
+      </CenteredContainer>
+      <div className="credit">
+        Designed by{" "}
+        <a href="https://www.freepik.com/free-vector/new-york-city-cityscape-scene_29108017.htm#query=new%20york%20cartoon&position=27&from_view=keyword&track=ais">
+          Freepik
+        </a>
+      </div>
+      <ShapeDivider>
+        <div className="custom-shape-divider-bottom-1692312022">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
+              className="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </ShapeDivider>
+    </Section>
+  );
+};
+
+export default JourneyHome;
+//TO ADD. 3D ANIMATION FOR HI IM DEVIN THAT HIGHLIGHTS EACH LETTER IN AN ANIMATION
+
 
 const Section = styled.section`
   display: flex;
@@ -91,60 +143,4 @@ flex-direction: column;
 align-items: flex-end;
 width: 85%;
 text-align: center;
-
-
 `;
-
-
-const JourneyHome = ({ id }) => {
-  const navigate = useNavigate();
-
-  const handleMoreButtonClick = () => {
-    navigate("/about");
-  };
-
-  return (
-    <Section id={id}>
-      <CenteredContainer>
-      <Title>My Journey</Title>
-      <JourneyText>
-        Born and raised in New York, I discovered my passion for technology at a
-        young age. After high school, I joined the military and became a medic.
-        On a whim, I decided to try out software development and instantly fell
-        in love. It's a passion I plan to pursue, whether professionally or as a
-        hobby.
-      </JourneyText>
-      <MoreButton 
-      className="more-button" 
-      onClick={handleMoreButtonClick}
-      >
-        <span>More About My Story</span>
-      </MoreButton>
-      </CenteredContainer>
-      <div className="credit">
-        Designed by{" "}
-        <a href="https://www.freepik.com/free-vector/new-york-city-cityscape-scene_29108017.htm#query=new%20york%20cartoon&position=27&from_view=keyword&track=ais">
-          Freepik
-        </a>
-      </div>
-      <ShapeDivider>
-        <div className="custom-shape-divider-bottom-1692312022">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
-              className="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </ShapeDivider>
-    </Section>
-  );
-};
-
-export default JourneyHome;
-//TO ADD. 3D ANIMATION FOR HI IM DEVIN THAT HIGHLIGHTS EACH LETTER IN AN ANIMATION

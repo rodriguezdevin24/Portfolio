@@ -6,68 +6,6 @@ import Portrait from "./Portrait.png";
 
 import "./home.css";
 
-const Section = styled.div`
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: flex-start;
-  text-align: left;
-  color: white;
-  position: relative;
-  scroll-snap-align: center;
-  background-color: #182459;
-  position: relative;
-  
-  @media (min-width: 769px) {
-    height: 90vh; // Set the height to 100vh on larger screens
-    padding-left: 5rem;
-  }
-  @media (max-width: 769px) {
-    padding-left: 1.5rem;
-    height: 100vh;
-`;
-
-const h1EnterFromBottomVariants = {
-  initial: {
-    y: "80vh",
-    x: "50%",
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    x: 0,
-    opacity: 1,
-    transition: { delay: 1, duration: 1 },
-  },
-};
-
-const subtitleVariants = {
-  initial: {
-    opacity: 0,
-    y: "100vh",
-  },
-  in: {
-    opacity: 0,
-    y: 0,
-  },
-  out: {
-    opacity: 1,
-    y: "-100vh",
-  },
-};
-
-const h1SlideFromRightVariants = {
-  initial: {
-    x: "-30vw",
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: { delay: 2.3, duration: 0.5 },
-  },
-};
 
 const LandingHome = () => {
   return (
@@ -149,6 +87,69 @@ const LandingHome = () => {
 };
 
 export default LandingHome;
+
+const Section = styled.div`
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: left;
+  color: white;
+  position: relative;
+  scroll-snap-align: center;
+  background-color: #182459;
+  position: relative;
+  
+  @media (min-width: 769px) {
+    height: 90vh; // Set the height to 100vh on larger screens
+    padding-left: 5rem;
+  }
+  @media (max-width: 769px) {
+    padding-left: 1.5rem;
+    height: 100vh;
+`;
+
+const h1EnterFromBottomVariants = {
+  initial: {
+    y: "80vh",
+    x: "50%",
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    x: 0,
+    opacity: 1,
+    transition: { delay: 1, duration: 1 },
+  },
+};
+
+const subtitleVariants = {
+  initial: {
+    opacity: 0,
+    y: "100vh",
+  },
+  in: {
+    opacity: 0,
+    y: 0,
+  },
+  out: {
+    opacity: 1,
+    y: "-100vh",
+  },
+};
+
+const h1SlideFromRightVariants = {
+  initial: {
+    x: "-30vw",
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: { delay: 2.3, duration: 0.5 },
+  },
+};
 
 const TextContainer = styled.div`
   width: 100%; 
