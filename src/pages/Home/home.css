@@ -168,6 +168,15 @@
   font-size: 1.7rem;
   text-align: left;
   width: 80%;
+  @media (max-width: 768px) {
+    width: 100%; 
+   }
+
+   @media screen and (max-width: 768px) {
+    width: 100%;
+   }
+    
+   
 }
 
 /* Journeyhome.css */
@@ -177,6 +186,9 @@
   font-size: 2.5em;
   margin-bottom: 2.8rem;
   display: inline-block;
+  @media (max-width: 769px) {
+    font-size: 1.5rem;
+}
   
 }
 
@@ -314,9 +326,11 @@
   border-right: 5px solid rgb(255, 255, 255);
   animation: typing 1.1s steps(18)forwards , blinking 1s infinite;
   animation-delay: 3.8s;
-  width: fit-content ;
   box-sizing: content-box;
   visibility: hidden;
+  @media (max-width: 768px) {
+    width: 100%; 
+   }
 }
 
 @keyframes typing {

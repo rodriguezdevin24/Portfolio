@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <Carousel3D cards={carouselSlides} offset={1} showArrows={true} width="40%" height="500px" margin="0 auto" />
+      <Carousel3D cards={carouselSlides} offset={1} showArrows={true} width="35%" height="600px" margin="0 auto" />
     </div>
   );
 };

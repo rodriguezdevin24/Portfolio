@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .card {
@@ -63,29 +63,77 @@ body {
   color: inherit;
   text-decoration: none;
 }
-/* Adjust the scale of the slides */
+
+
 .carousel-slide {
   transform: scale(0.8) !important;
 }
 
-/* Adjust the translation of the slides */
+
 .carousel-track {
   transform: translateX(-50%) perspective(1000px) rotateY(0deg) !important;
 }
 /* Style the arrow buttons */
 .carousel-button {
-  background-color: rgba(255, 255, 255, 0.5) !important; /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.5) !important; 
   border: none;
-  border-radius: 50%; /* Makes the button circular */
-  width: 40px; /* Width of the button */
-  height: 40px; /* Height of the button */
-  color: #000; /* Color of the arrow icon */
-  font-size: 20px; /* Size of the arrow icon */
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  color: #000;
+  font-size: 20px; 
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease; 
+  z-index: 2;
 }
 
 /* Hover effect for the arrow buttons */
 .carousel-button:hover {
   background-color: rgba(255, 255, 255, 0.8); /* More opaque white on hover */
+}
+@media only screen and (max-width: 768px) {
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .card {
+    width: 18rem!important; /* Take up most of the screen width */
+    height: 40rem !important;
+    margin: 15px 0;
+    padding-bottom: 3rem;
+  }
+
+  .card img {
+    max-height: 200px; /* Adjust based on your preference */
+  }
+
+  .card-body {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.css-1qzevvg {
+  min-height: 50px;
+  margin-top: 10rem;
+  color: white;
+  justify-content: center !important;
+  gap: 30rem;
+  filter: drop-shadow(0 0 0.75rem #182459);
+
 }

@@ -1,81 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import IntroJourney from './IntroJourney';
-import Education from './Education';
-import Goals from './Goals';
-import HireMe from './HireMe';
-import { Element } from "react-scroll";
-import SkillsHome from './SkillsAbout';
-
-// import './about.css';
-import '../../App.css';
+import React from 'react';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import './about.css';
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const [isAtBottom, setIsAtBottom] = useState(false);
-
-  const handleScroll = () => {
-    if(window.innerHeight + window.scrollY >= document.body.offsetHeight-50) {
-      setIsAtBottom(true);
-    } else {
-      setIsAtBottom(false);
-    }
-  };
-  useEffect (() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-    
-
-  
-
   return (
-    <div className="page-container">
-      <Canvas style={{ position: "absolute" }}>
-        <Stars />
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-      </Canvas>
-      <h1 className="about-title">A Little Bit About Me </h1>
-      <Element name="introJourney">
-        <IntroJourney />
-      </Element>
-      <Element name="education">
-        <Education />
-      </Element>
-      <Element name="skills">
-        <SkillsHome />
-      </Element>
-      <Element name="goals">
-        <Goals />
-      </Element>
-      <Element name="hireMe">
-        <HireMe />
-      </Element>
-      {!isAtBottom && ( 
-      <div
-        style={{
-          position: "fixed",
-          bottom: "1%",
-          left: "50%",
-          transform: "translateX(-40%)",
-        }}
-      >
-      </div>
-      )}
-    </div>
+    <Parallax pages={3}>
+      {/* Gradient Background */}
+      <ParallaxLayer offset={1} speed={0.3}>
+        <div className="outerSpaceGradient"></div>
+      </ParallaxLayer>
+
+      {/* Stars */}
+      <ParallaxLayer offset={0} speed={0.5}>
+        <div className="backgroundStars"></div>
+      </ParallaxLayer>
+
+      {/* Introduction Text */}
+      <ParallaxLayer offset={0} speed={0}>
+        <div className="introText">
+        Welcome! I'm Devin, a software engineer with a unique background and a
+        passion for creativity and technology. Born to Colombian immigrants in
+        New York City, I grew up valuing health, fitness, and mental
+        well-being. I'm bilingual, fluent in both Spanish and English, and
+        I've always had a drive for learning new skills and helping others
+        thrive. My journey into tech has been an exciting one, and I invite
+        you to continue scrolling to learn more about me.
+        </div>
+      </ParallaxLayer>        
+
+      {/* Early Life Text */}
+      <ParallaxLayer offset={1} speed={0.8}>
+        <div className="earlyLifeText">
+        I was born in New York City to two hardworking immigrants from Colombia
+        who came to the U.S. seeking a better life for their family. From a
+        young age, I valued creativity, health, and fitness. I've always had a
+        passion for learning new skills and helping others thrive. My early
+        experiences in high school JROTC, where I led a team to 5th place in a
+        competition, instilled in me a sense of leadership that would later be
+        reinforced during my military service.
+        </div>
+        <ParallaxLayer offset={0} speed={0.3}>
+        <div className="outerSpaceGradient"></div>
+      </ParallaxLayer>
+      </ParallaxLayer>
+
+      {/* ... other layers ... */}
+    </Parallax>
   );
 };
 
-
 export default About;
-
-// i love fitness and show video of you winning iron soldier and other related 
-// i love dogs and show other pictures related to dogs 
-//add 4 rows that stagnate down and then alternate
