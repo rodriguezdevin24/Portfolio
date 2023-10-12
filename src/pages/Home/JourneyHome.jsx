@@ -24,7 +24,8 @@ const JourneyHome = ({ id }) => {
         hobby.
       </JourneyText>
       <MoreButton 
-      className="more-button" 
+      className="more-buton btn btn-primary btn-lg" 
+      type="button"  
       onClick={handleMoreButtonClick}
       >
         <span>More About My Story</span>

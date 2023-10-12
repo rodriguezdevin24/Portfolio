@@ -22,7 +22,7 @@ export default function Carousel3D(props) {
 
   const handleSwipedLeft = () => {
     if (goToSlide === cards.length - 1) {
-      setGoToSlide(0); // Reset to the first slide
+      setGoToSlide(0); 
     } else {
       setGoToSlide(prev => prev + 1);
     }
@@ -30,7 +30,7 @@ export default function Carousel3D(props) {
   
   const handleSwipedRight = () => {
     if (goToSlide === 0) {
-      setGoToSlide(cards.length - 1); // Set to the last slide
+      setGoToSlide(cards.length - 1); 
     } else {
       setGoToSlide(prev => prev - 1);
     }

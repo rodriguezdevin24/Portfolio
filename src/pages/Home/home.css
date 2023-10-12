@@ -319,7 +319,7 @@
 .credit a:hover {
   text-decoration: underline;
 }
-.typing-effect {
+/* .typing-effect {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -332,6 +332,7 @@
     width: 100%; 
    }
 }
+
 
 @keyframes typing {
   0% {
@@ -351,7 +352,43 @@
   50% {
     border-color: rgb(255, 255, 255);
   }
+} */
+
+.typing-effect {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  letter-spacing: 1px;
 }
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.typing-effect::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-left: 0.5em;
+  border-right: 2px solid currentColor;
+  box-sizing: border-box;
+  animation: blink 1s step-end infinite;
+}
+
+
+
+
 .more-button {
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -427,3 +464,4 @@
 .more-button:hover span::after {
   height: 100%;
 }
+

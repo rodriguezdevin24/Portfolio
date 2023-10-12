@@ -13,10 +13,6 @@ import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
 import Footer from "./components/Footer/Footer";
 import 'normalize.css';
 
-
-// import { Scroll } from "@react-three/drei";
-
-
 //TO ADD A REVIEW SECTION WHERE PEOPLE CAN LEAVE REVIEWS
 
 const App = () => {

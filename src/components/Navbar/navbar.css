@@ -5,6 +5,8 @@
   font-size: 2.9rem; /* 50px */
   font-weight: bold; 
   color:#ffffff !important;
+  z-index: 999;
+  position: fixed;
 }
 
 
@@ -13,6 +15,11 @@
   color: white !important;
   margin-right: 1rem; 
   font-size: 1.2rem;
+  @media screen and (max-width: 991px) {
+    text-align: right !important;
+    padding-top: 2rem;
+    
+  }
 }
 
 .nav-links .nav-link:hover {
@@ -34,7 +41,10 @@
 .logo-image {
   width: 5rem;
   height: 7rem;
-  filter: drop-shadow(0 0 0.65rem #eaf09b);
+  filter: drop-shadow(0 0 0.6rem #eaf09b);
   margin-top: 1rem;
   /* Add any other styles you want */
+}
+.navbar-collapse {
+  position: relative !important;
 }

@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 body {
   margin: 0;
-  font-family:  "Helvetica", sans-serif !important;
+  font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .app-container {
@@ -19,19 +20,11 @@ code {
   overflow: hidden;
 }
 
-
-html,
-body {
+html, body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-body {
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif !important;
-}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
 }

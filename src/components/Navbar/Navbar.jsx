@@ -42,8 +42,8 @@ function MainNavbar() {
             className="justify-content-end"
           >
             <Nav className="nav-links">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/projects">Projects</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/projects ">Projects</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="mailto:rodriguezdevin24@gmail.com">
                 Contact

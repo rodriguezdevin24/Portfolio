@@ -1,13 +1,22 @@
 // LandingHome.jsx
-import React from "react";
+import React, { useState, useEffect} from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Portrait from "./Portrait.png";
+import Typing from 'react-typing-effect';
 
 import "./home.css";
 
 
 const LandingHome = () => {
+  const [typingStart, setTypingStart] = useState(false);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => setTypingStart(true), 3100); // Set timeout for 3.5 seconds
+    return () => clearTimeout(timerId); // Clean up the timer to avoid memory leaks
+  }, []);
+
+
   return (
     <Section>
       <TextContainer>
@@ -47,20 +56,22 @@ const LandingHome = () => {
           >
             Devin Rodriguez
           </motion.h2>
-          <h2
-            className="landing-subtitle typing-effect"
-            variants={subtitleVariants}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
-              delay: 5.8,
-            }}
-          >
-            A Software Engineer
-          </h2>
+          <h2 className="landing-subtitle typin-effect">
+          {typingStart && (
+    <Typing 
+        speed={50}
+        eraseDelay={220}
+        startDelay={10500}
+        text={[
+          'A Software Engineer                  ',
+          'A Full Stack Developer               ',
+          "A Dog's Best Friend               "
+        ]}
+          
+    />
+)}
+</h2>
+
           <motion.p
             className="landing-text"
             initial={{ x: "-170%" }}
@@ -89,7 +100,7 @@ const LandingHome = () => {
 export default LandingHome;
 
 const Section = styled.div`
-  overflow: auto;
+  overflow: auto;¸
   display: flex;
   flex-direction: row;
   justify-content: start;

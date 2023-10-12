@@ -1,37 +1,114 @@
 /* about.css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.first-section {
+  min-height: 100vh;
 
-
-.introductionContainer {
-  background: linear-gradient(to bottom, #000428, #004e92, #000428); /* Gradient for outer space feel */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+.name {
+  font-size: 5rem;
+  
+  color: #fff;
+  margin-bottom: 3rem;
+}
 
-.backgroundStars {
-  background-image: url('./stars.png'); /* Using the stars.png image */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.about-me {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+}
+
+/* ... Other CSS ... */
+
+.img-fluid {
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  animation: animate 3s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+  position: absolute;
+}
+
+@keyframes animate {
+  0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: 50px; 
+  left: 100px; 
+  width: 15rem; 
+  height: auto;
+
+}
+
+.earlyLifeContainer {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  /* margin-top: 45rem; */
+}
+.earlyLifeh1 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: right; */
+}
+.transition-image {
+  transition: opacity 3s ease-in-out;
+  width: 550px;
+  height: 550px;
+}
+
+.img-fluid:hover .transition-image {
+  opacity: 0;
+  width: 550px;
+  height: 550px;
+}
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  background: black;
+  opacity: 0;
+  pointer-events: none; /* Prevents the blackout layer from interfering with clicks */
+  z-index: 9999;
 }
-
-.outerSpaceGradient {
-  background: linear-gradient(to bottom, #000033 0%, #000066 50%, #000099 100%); /* Gradient resembling outer space */
-  width: 100%;
-  height: 100vh;
-}
-.introText, .earlyLifeText {
+.panel {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-size: 24px;
+  justify-content: center;
+  font-size: 2em;
   color: white;
-  text-align: center;
-  padding: 0 20px;
 }
+
+.blue {
+  background-color: blue;
+}
+
+.black {
+  background-color: black;
+}
+
+.orange {
+  background-color: orange;
+  height: 220vh;
+}
+

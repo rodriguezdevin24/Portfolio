@@ -1,23 +1,60 @@
-import React from "react";
-// import { ParallaxLayer } from '@react-spring/parallax';
-import "./about.css"; // Import the CSS for this component
+//Introduction.jsx
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./about.css";
+import Athena from "./Athena.jpeg";
+import devin from "./devin.jpeg";
 
-const Introduction = () => {
+
+const DevinSection = () => {
+    const [image, setImage] = useState(Athena);
+    // const images = [Athena, devin];
+
+    const handleMouseOver = () => {
+        setImage(devin);
+    }
+    const handleMouseOut = () => {
+        setImage(Athena);
+    }
+
+
   return (
-    <div className="introductionContainer">
-      <p className="introductionText">
-        Welcome! I'm Devin, a software engineer with a unique background and a
-        passion for creativity and technology. Born to Colombian immigrants in
-        New York City, I grew up valuing health, fitness, and mental
-        well-being. I'm bilingual, fluent in both Spanish and English, and
-        I've always had a drive for learning new skills and helping others
-        thrive. My journey into tech has been an exciting one, and I invite
-        you to continue scrolling to learn more about me.
-      </p>
-    </div>
+    <section className="first-section d-flex align-items-center panel blue ">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <h1 className="name">Devin Rodriguez</h1>
+            <p className="about-me border p-3">
+              Hi, I'm Devin, a passionate web developer specializing in
+              front-end technologies. I love turning ideas into reality and am
+              constantly exploring new technologies to create seamless user
+              experiences.
+            </p>
+          </div>
+          <div className="col-md-6 d-flex justify-content-center">
+            <img 
+            src={image} 
+            alt="Devin and Athena" 
+            className="img-fluid transition-image "
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}  />
+          </div>
+          <div className="spacer" style={{height: '550px'}}></div>
+        </div>
+      </div>
+      <svg className="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <g strokeWidth="10" stroke="white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 26" transform="matrix(1,0,0,1,-132,0)">
+        <path d="M244.6934814453125 288.4115753173828Q522.6934814453125 70.41157531738281 396.6934814453125 440.4115753173828Q587.6934814453125 343.4115753173828 548.6934814453125 592.4115753173828 " markerEnd="url(#SvgjsMarker4463)"></path>
+    </g>
+    <defs>
+        <marker markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" viewBox="0 0 5 5" orient="auto" id="SvgjsMarker4463">
+            <polygon points="0,5 2.5,2.5 0,0 5,2.5" fill="white"></polygon>
+        </marker>
+    </defs>
+</svg>
+
+    </section>
   );
 };
 
-export default Introduction;
-
-// i love fitness and show video of you winning iron soldier 
+export default DevinSection;
