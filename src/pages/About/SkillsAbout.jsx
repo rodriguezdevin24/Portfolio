@@ -142,5 +142,6 @@ const SkillsAbout = ({ id }) => {
     </Section>
   );
 };
-
+//section for showing that i know two languages
 export default SkillsAbout;
+

@@ -3,8 +3,9 @@ import React, { useState, useEffect} from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Portrait from "./Portrait.png";
+import Athena from "../About/Athena.jpeg";
 import Typing from 'react-typing-effect';
-
+// import AnimatedStars from "./AnimatedStars";
 import "./home.css";
 
 
@@ -12,13 +13,24 @@ const LandingHome = () => {
   const [typingStart, setTypingStart] = useState(false);
 
   useEffect(() => {
-    const timerId = setTimeout(() => setTypingStart(true), 3100); // Set timeout for 3.5 seconds
+    const timerId = setTimeout(() => setTypingStart(true), 2900); // Set timeout for 3.5 seconds
     return () => clearTimeout(timerId); // Clean up the timer to avoid memory leaks
   }, []);
+
+  const [image, setImage] = useState(Portrait);
+  //  const images = [Portrait, Athena];
+
+  const handleMouseOver = () => {
+      setImage(Athena);
+  }
+  const handleMouseOut = () => {
+      setImage(Portrait);
+  }
 
 
   return (
     <Section>
+      {/* <AnimatedStars />  */}
       <TextContainer>
         <TextWrapper>
           <div style={{ display: "flex", justifyContent: "left", alignItems: "left", paddingTop: "40px", paddingBottom: "1.5rem"}}
@@ -59,13 +71,14 @@ const LandingHome = () => {
           <h2 className="landing-subtitle typin-effect">
           {typingStart && (
     <Typing 
-        speed={50}
-        eraseDelay={220}
-        startDelay={10500}
+        speed={40}
+        eraseSpeed={40}
+        eraseDelay={70}
+        
         text={[
-          'A Software Engineer                  ',
-          'A Full Stack Developer               ',
-          "A Dog's Best Friend               "
+          'A Software Engineer                                      ',
+          'A Full Stack Developer                           ',
+          "A Dog's Best Friend                            "
         ]}
           
     />
@@ -82,10 +95,17 @@ const LandingHome = () => {
             perspective and a passion for learning to my work.
           </motion.p>
         </TextWrapper>
-        <PortraitContainer>
-          <PortraitImage src={Portrait} alt="Your Name" />
+        <RingContainer>
+        <PortraitContainer className="portrait transition-image">
+          <PortraitImage 
+          src={image} 
+          alt="Devin Rodriguez"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}  />
         </PortraitContainer>
+        </RingContainer>
       </TextContainer>
+      
       <ShapeDivider>
         <div className="custom-shape-divider-bottom-1692326285">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -109,7 +129,7 @@ const Section = styled.div`
   color: white;
   position: relative;
   scroll-snap-align: center;
-  background-color: #182459;
+  background: linear-gradient(to bottom, #00012c, #1a0921);
   position: relative;
   
   @media (min-width: 769px) {
@@ -177,23 +197,53 @@ const TextWrapper = styled.div`
   }
 `;
 
+const RingContainer = styled.div`
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px 0; 
+  margin-right: 9rem;
+  margin-top: 3rem;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &::before {
+    width: calc(100% - .5rem); // 1rem smaller than the RingContainer
+    height: calc(100% - .5rem);
+  }
+
+  &::after {
+    width: calc(100% - .5); // 2rem smaller than the RingContainer
+    height: calc(100% - .5rem);
+  }
+`;
+
 const PortraitContainer = styled.div`
-  width: 12rem; // Adjust the size as needed
-  height: 12rem;
+  width: 13rem; 
+  height: 13rem;
   border-radius: 50%;
-  overflow: hidden;
-  margin: 20px 0; // Add some margin for spacing
-  background-color: #dcd8af;
-  margin-right: 11rem;
-  margin-top: 5rem;
+  overflow: hidden; 
+  background-color: #8a6f48;
+  z-index: 2; // This ensures the image and its background is above the rings
 `;
 
 const PortraitImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-top: 20px;
-  filter: drop-shadow(0 0 0.75rem #182459);
+  filter: drop-shadow(0 0 0.75rem #1a0921);
 `;
 
 const ShapeDivider = styled.div`
@@ -215,6 +265,7 @@ const ShapeDivider = styled.div`
   }
 
   .custom-shape-divider-bottom-1692326285 .shape-fill {
-    fill: #607D8F;
+    fill: rgb(96,125,143)
+}
   }
 `;

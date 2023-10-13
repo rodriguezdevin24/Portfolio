@@ -149,7 +149,7 @@
 .landing-title {
   font-size: 4rem;
   margin-bottom: 2.5rem;
-  font-weight: bold; 
+  /* font-weight: bold;  */
   width: 100%;
   display: inline-block;
 
@@ -465,3 +465,15 @@
   height: 100%;
 }
 
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  /* Additional styling as needed */
+}
+
+.transition-image {
+  transition: opacity 3s ease-in-out;
+  width: 550px;
+  height: 550px;
+}

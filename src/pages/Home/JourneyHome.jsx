@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 
+
 const JourneyHome = ({ id }) => {
   const navigate = useNavigate();
 
@@ -14,6 +15,7 @@ const JourneyHome = ({ id }) => {
 
   return (
     <Section id={id}>
+      
       <CenteredContainer>
       <Title>My Journey</Title>
       <JourneyText>
