@@ -32,7 +32,7 @@ const Military = () => {
             <ul>
               <li>📘 [A lesson you learned]</li>
               <li>📙 [Another lesson]</li>
-              <li>📗 [Yet another lesson]</li>
+              <li>📗 [It's easier to prevent things than to wait until your health gets bad! Use your body while you can!]</li>
             </ul>
           </div>
 

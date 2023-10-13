@@ -235,7 +235,7 @@ const PortraitContainer = styled.div`
   height: 13rem;
   border-radius: 50%;
   overflow: hidden; 
-  background-color: #8a6f48;
+  background-color: #DDD8AB;
   z-index: 2; // This ensures the image and its background is above the rings
 `;
 

@@ -5,9 +5,7 @@ import "./about.css";
 import Athena from "./Athena.jpeg";
 
 
-
 const DevinSection = () => {
-
 
 
   return (
@@ -32,7 +30,6 @@ const DevinSection = () => {
             className="img-fluid"
              />
           </div>
-          {/* <div className="spacer" style={{height: '550px'}}></div> */}
         </div>
       </div>
       <svg className="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
@@ -45,7 +42,6 @@ const DevinSection = () => {
         </marker>
     </defs>
 </svg>
-
     </section>
   );
 };
